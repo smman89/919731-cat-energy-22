@@ -40,17 +40,17 @@
           <legend class="visually-hidden">О Вас:</legend>
           <ul class="about-list">
             <li class="about-list__item input">
-              <label for="name">
+              <label>
                 <span>Имя:</span><input type="text" name="name" required>
               </label>
             </li>
             <li class="about-list__item input">
-              <label for="weight">
+              <label>
                 <span>Вес(кг):</span><input type="text" name="weight" required>
               </label>
             </li>
             <li class="about-list__item input">
-              <label for="age">
+              <label>
                 <span>Возраст(лет):</span><input type="text" name="age">
               </label>
             </li>
@@ -78,16 +78,20 @@
         <fieldset class="form__contacts">
           <legend>Контактные данные
             (владельца кота)</legend>
-          <div class="input">
-            <label for="email">
-              <span>Email:</span><input class="field" type="email" name="email" required>
-            </label>
-          </div>
-          <div class="input">
-            <label for="phone">
-              <span>Телефон:</span><input class="phone" type="tel" name="phone" required placeholder="8(960) 900-60-90">
-            </label>
-          </div>
+
+          <ul class="contacts-list">
+            <li class="contacts-list__item input">
+              <label>
+                <span>Email:</span><input class="field" type="email" name="email" required>
+              </label>
+            </li>
+            <li class="contacts-list__item input">
+              <label>
+                <span>Телефон:</span><input class="phone" type="tel" name="phone" required
+                  placeholder="8(960) 900-60-90">
+              </label>
+            </li>
+          </ul>
         </fieldset>
 
         <fieldset class="form__comment">
@@ -98,22 +102,24 @@
 
         <fieldset class="form__additional">
           <legend>Дополнительно</legend>
-          <div class="checkbox">
-            <input type="checkbox" name="additional" value="sugarSubstitute" id="sugarSubstitute" checked>
-            <label for="sugarSubstitute">Сахарозаменитель</label>
-          </div>
-          <div class="checkbox">
-            <input type="checkbox" name="additional" value="watter" id="watter">
-            <label for="watter">Питьевая вода</label>
-          </div>
-          <div class="checkbox">
-            <input type="checkbox" name="additional" value="milk" id="milk">
-            <label for="milk">Молоко</label>
-          </div>
-          <div class="checkbox">
-            <input type="checkbox" name="additional" value="vitamins" id="vitamins">
-            <label for="vitamins">Витамины</label>
-          </div>
+          <ul class="additional-list">
+            <li class="additional-list__item checkbox">
+              <input type="checkbox" name="additional" value="sugarSubstitute" id="sugarSubstitute" checked>
+              <label for="sugarSubstitute">Сахарозаменитель</label>
+            </li>
+            <li class="additional-list__item checkbox">
+              <input type="checkbox" name="additional" value="watter" id="watter">
+              <label for="watter">Питьевая вода</label>
+            </li>
+            <li class="additional-list__item checkbox">
+              <input type="checkbox" name="additional" value="milk" id="milk">
+              <label for="milk">Молоко</label>
+            </li>
+            <li class="additional-list__item checkbox">
+              <input type="checkbox" name="additional" value="vitamins" id="vitamins">
+              <label for="vitamins">Витамины</label>
+            </li>
+          </ul>
         </fieldset>
 
         <div class="form__buttons">
