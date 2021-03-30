@@ -30,89 +30,100 @@
     </nav>
   </header>
 
-
   <main class="page-form container">
-    <h1>Подбор программы</h1>
-    <p class="slogan">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+    <section>
+      <h1>Подбор программы</h1>
+      <p class="slogan">Заполните анкету, и мы подберем программу питания для вашего кота</p>
 
-    <form class="form" action="https://echo.htmlacademy.ru" method="post">
-      <fieldset class="form__about">
-        <legend class="visually-hidden">О Вас:</legend>
-        <div class="input">
-          <label for="name">Имя:</label>
-          <input type="text" name="name" id="name" required>
-        </div>
-        <div class="input">
-          <label for="weight">Вес(кг):</label>
-          <input type="number" name="weight" id="weight" required>
-        </div>
-        <div class="input">
-          <label for="age">Возраст(лет):</label>
-          <input type="number" name="age" id="age">
-        </div>
-      </fieldset>
+      <form class="form" action="https://echo.htmlacademy.ru" method="post">
+        <fieldset class="form__about">
+          <legend class="visually-hidden">О Вас:</legend>
+          <ul class="about-list">
+            <li class="about-list__item input">
+              <label for="name">
+                <span>Имя:</span><input type="text" name="name" required>
+              </label>
+            </li>
+            <li class="about-list__item input">
+              <label for="weight">
+                <span>Вес(кг):</span><input type="text" name="weight" required>
+              </label>
+            </li>
+            <li class="about-list__item input">
+              <label for="age">
+                <span>Возраст(лет):</span><input type="text" name="age">
+              </label>
+            </li>
+          </ul>
+        </fieldset>
 
-      <fieldset class="form__program">
-        <legend class="visually-hidden">Ваша цель:</legend>
-        <div class="radio-button">
-          <input type="radio" name="program" value="slimming" id="slimming" checked>
-          <label for="slimming">Похудение</label>
-        </div>
-        <div class="radio-button">
-          <input type="radio" name="program" value="weightGain" id="weightGain">
-          <label for="weightGain">Набор массы</label>
-        </div>
-        <div class="radio-button">
-          <input type="radio" name="program" value="dontNow" id="dontNow">
-          <label for="dontNow">Не знаю (нужен ваш совет)</label>
-        </div>
-      </fieldset>
+        <fieldset class="form__program">
+          <legend class="visually-hidden">Ваша цель:</legend>
+          <ul class="program-list">
+            <li class="program-list__item radio-button">
+              <input type="radio" name="program" value="slimming" id="slimming" checked>
+              <label for="slimming">Похудение</label>
+            </li>
+            <li class="program-list__item radio-button">
+              <input type="radio" name="program" value="weightGain" id="weightGain">
+              <label for="weightGain">Набор массы</label>
+            </li>
+            <li class="program-list__item radio-button">
+              <input type="radio" name="program" value="dontNow" id="dontNow">
+              <label for="dontNow">Не знаю (нужен ваш совет)</label>
+            </li>
+          </ul>
+        </fieldset>
 
-      <fieldset class="form__contacts">
-        <legend>Контактные данные
-          (владельца кота)</legend>
-        <div class="input">
-          <label for="email">Email:</label>
-          <input class="field" type="email" name="email" id="email" required>
-        </div>
-        <div class="input">
-          <label for="phone">Телефон:</label>
-          <input class="phone" type="tel" name="phone" id="phone" required
-            pattern="8([0-9]{3}) [0-9]{3}-[0-9]{2}-[0-9]{2})" placeholder="8(960) 900-60-90">
-        </div>
-      </fieldset>
+        <fieldset class="form__contacts">
+          <legend>Контактные данные
+            (владельца кота)</legend>
+          <div class="input">
+            <label for="email">
+              <span>Email:</span><input class="field" type="email" name="email" required>
+            </label>
+          </div>
+          <div class="input">
+            <label for="phone">
+              <span>Телефон:</span><input class="phone" type="tel" name="phone" required placeholder="8(960) 900-60-90">
+            </label>
+          </div>
+        </fieldset>
 
-      <fieldset class="form__comment">
-        <legend>Комментарий</legend>
-        <textarea name="comment" id="comment" rows="5" placeholder="Расскажите обо всех повадках кота"></textarea>
-      </fieldset>
+        <fieldset class="form__comment">
+          <legend>Комментарий</legend>
+          <textarea name="comment" rows="5" placeholder="Расскажите обо всех повадках кота"
+            aria-label="Расскажите обо всех повадках кота"></textarea>
+        </fieldset>
 
-      <fieldset class="form__additional">
-        <legend>Дополнительно</legend>
-        <div class="checkbox">
-          <input type="checkbox" name="sugarSubstitute" id="sugarSubstitute" checked>
-          <label for="sugarSubstitute">Сахарозаменитель</label>
+        <fieldset class="form__additional">
+          <legend>Дополнительно</legend>
+          <div class="checkbox">
+            <input type="checkbox" name="additional" value="sugarSubstitute" id="sugarSubstitute" checked>
+            <label for="sugarSubstitute">Сахарозаменитель</label>
+          </div>
+          <div class="checkbox">
+            <input type="checkbox" name="additional" value="watter" id="watter">
+            <label for="watter">Питьевая вода</label>
+          </div>
+          <div class="checkbox">
+            <input type="checkbox" name="additional" value="milk" id="milk">
+            <label for="milk">Молоко</label>
+          </div>
+          <div class="checkbox">
+            <input type="checkbox" name="additional" value="vitamins" id="vitamins">
+            <label for="vitamins">Витамины</label>
+          </div>
+        </fieldset>
+
+        <div class="form__buttons">
+          <button class="button" type="submit">Отправить заявку</button>>
         </div>
-        <div class="checkbox">
-          <input type="checkbox" name="watter" id="watter">
-          <label for="watter">Питьевая вода</label>
-        </div>
-        <div class="checkbox">
-          <input type="checkbox" name="milk" id="milk">
-          <label for="milk">Молоко</label>
-        </div>
-        <div class="checkbox">
-          <input type="checkbox" name="vitamins" id="vitamins">
-          <label for="vitamins">Витамины</label>
-        </div>
-      </fieldset>
-      <div class="form__buttons">
-        <input class="button" type="submit" value="Отправить заявку">
-      </div>
-      <p class="form__description">
-        * - Обязательные поля
-      </p>
-    </form>
+        <p class="form__description">
+          * - Обязательные поля
+        </p>
+      </form>
+    </section>
   </main>
 
   <footer class="page-footer">
@@ -124,28 +135,28 @@
         <li class="social-list__item">
           <a href="https://faceboock.com/htmlacademy" class="social-list__link" aria-label="Вконтакте">
             <svg width="23" height="16" aria-hidden="true">
-              <use xlink:href="#vkontakte-icon">
+              <use xlink:href="#vkontakte-icon"></use>
             </svg>
           </a>
         </li>
         <li class="social-list__item">
           <a href="https://instagram.com/htmlacademy" class="social-list__link" aria-label="Instagram">
             <svg width="16" height="16" aria-hidden="true">
-              <use xlink:href="#instagram-icon">
+              <use xlink:href="#instagram-icon"></use>
             </svg>
           </a>
         </li>
         <li class="social-list__item">
           <a href="https://vk.com/htmlacademy" class="social-list__link" aria-label="Facebook">
             <svg width="22" height="22" aria-hidden="true">
-              <use xlink:href="#facebook-icon">
+              <use xlink:href="#facebook-icon"></use>
             </svg></a>
         </li>
       </ul>
       <a class="page-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive">
         <span>HTML Academy</span>
         <svg width="27" height="34" aria-hidden="true">
-          <use xlink:href="#htmlacademy-footer-logo">
+          <use xlink:href="#htmlacademy-footer-logo"></use>
         </svg>
       </a>
     </div>
