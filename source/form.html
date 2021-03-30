@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Кэт энерджи</title>
+</head>
+
+<body class="page-body">
+
+  <header class="page-header">
+    <a class="page-header__logo">
+      <img src="img/logo.svg" alt="Функциональное питание для котов" height="38" width="34">
+    </a>
+    <nav class="main-nav">
+      <button type="button" class="main-nav__toggle" aria-label="Показать/скрыть меню"></button>
+      <div class="container">
+        <ul class="main-nav__list">
+          <li class="main-nav__item main-nav__item--active">
+            <a>Главная</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="catalog.html">Каталог продукции</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="programs.html">Подбор программы</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page-form container">
+    <section>
+      <h1>Подбор программы</h1>
+      <p class="slogan">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+
+      <form class="form" action="https://echo.htmlacademy.ru" method="post">
+        <fieldset class="form__about">
+          <legend class="visually-hidden">О Вас:</legend>
+          <ul class="about-list">
+            <li class="about-list__item input">
+              <label>
+                <span>Имя:</span><input type="text" name="name" required>
+              </label>
+            </li>
+            <li class="about-list__item input">
+              <label>
+                <span>Вес(кг):</span><input type="text" name="weight" required>
+              </label>
+            </li>
+            <li class="about-list__item input">
+              <label>
+                <span>Возраст(лет):</span><input type="text" name="age">
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+
+        <fieldset class="form__program">
+          <legend class="visually-hidden">Ваша цель:</legend>
+          <ul class="program-list">
+            <li class="program-list__item radio-button">
+              <input type="radio" name="program" value="slimming" id="slimming" checked>
+              <label for="slimming">Похудение</label>
+            </li>
+            <li class="program-list__item radio-button">
+              <input type="radio" name="program" value="weightGain" id="weightGain">
+              <label for="weightGain">Набор массы</label>
+            </li>
+            <li class="program-list__item radio-button">
+              <input type="radio" name="program" value="dontNow" id="dontNow">
+              <label for="dontNow">Не знаю (нужен ваш совет)</label>
+            </li>
+          </ul>
+        </fieldset>
+
+        <fieldset class="form__contacts">
+          <legend>Контактные данные
+            (владельца кота)</legend>
+
+          <ul class="contacts-list">
+            <li class="contacts-list__item input input--with-icon">
+              <label>
+                <span>Email:</span><input class="email" type="email" name="email" required>
+              </label>
+            </li>
+            <li class="contacts-list__item input input--with-icon">
+              <label>
+                <span>Телефон:</span><input class="phone" type="tel" name="phone" required
+                  placeholder="8(960) 900-60-90">
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+
+        <fieldset class="form__comment">
+          <legend>Комментарий</legend>
+          <textarea name="comment" rows="5" placeholder="Расскажите обо всех повадках кота"
+            aria-label="Расскажите обо всех повадках кота"></textarea>
+        </fieldset>
+
+        <fieldset class="form__additional">
+          <legend>Дополнительно</legend>
+          <ul class="additional-list">
+            <li class="additional-list__item checkbox">
+              <input type="checkbox" name="additional" value="sugarSubstitute" id="sugarSubstitute" checked>
+              <label for="sugarSubstitute">Сахарозаменитель</label>
+            </li>
+            <li class="additional-list__item checkbox">
+              <input type="checkbox" name="additional" value="watter" id="watter">
+              <label for="watter">Питьевая вода</label>
+            </li>
+            <li class="additional-list__item checkbox">
+              <input type="checkbox" name="additional" value="milk" id="milk">
+              <label for="milk">Молоко</label>
+            </li>
+            <li class="additional-list__item checkbox">
+              <input type="checkbox" name="additional" value="vitamins" id="vitamins">
+              <label for="vitamins">Витамины</label>
+            </li>
+          </ul>
+        </fieldset>
+
+        <div class="form__buttons">
+          <button class="button" type="submit">Отправить заявку</button>>
+        </div>
+        <p class="form__description">
+          * - Обязательные поля
+        </p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="page-footer">
+    <div class="container">
+      <a class="page-footer__logo">
+        <img src="img/cat-energy-logo.png" alt="Cat Energy" width="128" height="24">
+      </a>
+      <ul class="page-footer__social social-list">
+        <li class="social-list__item">
+          <a href="https://faceboock.com/htmlacademy" class="social-list__link" aria-label="Вконтакте">
+            <svg width="23" height="16" aria-hidden="true">
+              <use xlink:href="#vkontakte-icon"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a href="https://instagram.com/htmlacademy" class="social-list__link" aria-label="Instagram">
+            <svg width="16" height="16" aria-hidden="true">
+              <use xlink:href="#instagram-icon"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a href="https://vk.com/htmlacademy" class="social-list__link" aria-label="Facebook">
+            <svg width="22" height="22" aria-hidden="true">
+              <use xlink:href="#facebook-icon"></use>
+            </svg></a>
+        </li>
+      </ul>
+      <a class="page-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive">
+        <span>HTML Academy</span>
+        <svg width="27" height="34" aria-hidden="true">
+          <use xlink:href="#htmlacademy-footer-logo"></use>
+        </svg>
+      </a>
+    </div>
+  </footer>
+
+</body>
+
+</html>
