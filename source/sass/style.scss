@@ -1,1 +1,18 @@
-// Начните писать стили здесь
+// Global
+@import "global/colors.scss";
+@import "global/fonts.scss";
+@import "global/global.scss";
+@import "vendor/normolize.scss";
+
+// Blocks
+@import "blocks/button.scss";
+@import "blocks/contacts.scss";
+@import "blocks/difference.scss";
+@import "blocks/example.scss";
+@import "blocks/footer.scss";
+@import "blocks/hero.scss";
+@import "blocks/indicators.scss";
+@import "blocks/programs.scss";
+@import "blocks/works.scss";
+@import "blocks/main-nav.scss";
+@import "blocks/slider.scss";

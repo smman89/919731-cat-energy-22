@@ -1,0 +1,20 @@
+.button {
+  padding: 10px;
+  font-family: "Oswald", "Arial", sans-serif;
+  text-transform: uppercase;
+  color: $basicWhite;
+  background-color: $basicGreen;
+
+  &--grey {
+    color: $specialDarkGrey;
+    background-color: $basicGrey;
+  }
+
+  &:hover {
+    background-color: $basicGreen2;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}

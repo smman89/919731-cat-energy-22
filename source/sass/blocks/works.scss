@@ -1,0 +1,45 @@
+.works {
+  display: block;
+}
+
+.works__list {
+  list-style: none;
+}
+
+.works__item {
+  &--leaf::before {
+    background: url("../img/works/leaf.svg") no-repeat;
+    content: "";
+    display: block;
+    width: auto;
+    height: 60px;
+  }
+
+  &--water::before {
+    background: url("../img/works/watter.svg") no-repeat;
+    content: "";
+    display: block;
+    width: auto;
+    height: 60px;
+  }
+
+  &--nutrition::before {
+    background: url("../img/works/nutrition.svg") no-repeat;
+    content: "";
+    display: block;
+    width: auto;
+    height: 60px;
+  }
+
+  &--clock::before {
+    background: url("../img/works/clock.svg") no-repeat;
+    content: "";
+    display: block;
+    width: auto;
+    height: 60px;
+  }
+}
+
+.works__description {
+  display: inline-block;
+}

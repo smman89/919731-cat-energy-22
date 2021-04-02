@@ -1,0 +1,20 @@
+.indicators__item {
+  border: 1px solid $specialGrey2;
+  border-radius: 3px;
+}
+
+.indicators__number {
+  font-size: 24px;
+  text-transform: uppercase;
+  color: $basicBlack;
+  font-family: "Oswald", "Arial", sans-serif;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.indicators__description {
+  background-color: $lightGrey2;
+  padding: 16px;
+  width: 60px;
+  text-align: center;
+}

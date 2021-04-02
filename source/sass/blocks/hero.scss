@@ -1,0 +1,29 @@
+.hero .container {
+  background-image: linear-gradient(to top, rgba($basicGreen, 0.85), rgba($basicGreen, 0.85)),
+    url("../img/hero-cat.png");
+  background-repeat: no-repeat, no-repeat;
+  height: 280px;
+  margin-bottom: 150px;
+}
+
+.hero__title {
+  color: $basicWhite;
+  text-transform: none;
+  text-align: center;
+  margin: 37px 27px;
+}
+
+.hero__slogan {
+  font-family: "Oswald", "Arial", sans-serif;
+  text-transform: uppercase;
+  color: $basicWhite;
+  text-align: center;
+
+  &::after {
+    background: url("../img/hero.png") no-repeat;
+    content: "";
+    display: block;
+    width: 280px;
+    height: 270px;
+  }
+}
