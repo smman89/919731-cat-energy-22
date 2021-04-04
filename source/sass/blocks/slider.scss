@@ -1,6 +1,5 @@
 .slider__toggle {
   border: none;
-  font-family: "Oswald", "Arial", sans-serif;
   text-transform: uppercase;
   background: transparent;
   font-size: 16px;
@@ -10,7 +9,7 @@
 input[type="range"] {
   overflow: hidden;
   width: 82px;
-  -webkit-appearance: none;
+  appearance: none;
   background-color: $basicWhite;
   border-radius: 6px;
   border: 1px solid $specialGrey;
@@ -19,12 +18,12 @@ input[type="range"] {
 
 input[type="range"]::-webkit-slider-runnable-track {
   height: 6px;
-  -webkit-appearance: none;
+  appearance: none;
   margin: 3px;
 }
 
 input[type="range"]::-webkit-slider-thumb {
-  -webkit-appearance: none;
+  appearance: none;
   height: 6px;
   width: 35px;
   border-radius: 6px;
@@ -36,6 +35,7 @@ input[type="range"]::-webkit-slider-thumb {
 input[type="range"]::-moz-range-progress {
   background-color: $basicWhite;
 }
+
 input[type="range"]::-moz-range-track {
   background-color: $basicGreen;
 }

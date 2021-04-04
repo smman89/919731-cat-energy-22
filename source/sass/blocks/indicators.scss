@@ -2,7 +2,6 @@
   font-size: 24px;
   text-transform: uppercase;
   color: $basicBlack;
-  font-family: "Oswald", "Arial", sans-serif;
   text-align: center;
   padding-top: 15px;
 }
@@ -23,19 +22,10 @@
   width: 124px;
   height: 56px;
   margin: 20px;
+
   &--full {
     border: none;
-    display: inline;
-  }
-
-  &--full > * {
     text-transform: uppercase;
-    font-family: "Oswald", "Arial", sans-serif;
     font-size: 14px;
-    display: inline;
-    padding: 0px;
-    margin: 0;
-    bottom: 0;
-    left: 0;
   }
 }

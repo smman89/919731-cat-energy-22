@@ -1,9 +1,11 @@
-.works {
-  display: block;
-}
-
 .works__list {
   list-style: none;
+}
+
+.works__title {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 26px;
 }
 
 .works__item {
@@ -42,4 +44,8 @@
 
 .works__description {
   display: inline-block;
+  font-family: $font-family--arial;
+  font-size: 14px;
+  line-height: 18px;
+  color: $specialDarkGrey;
 }

@@ -36,18 +36,21 @@
 
 .programs__title {
   display: inline-block;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
 }
 
 .programs__description {
   padding-bottom: 23px;
-  font-family: "Arial", sans-serif;
+  font-family: $font-family--arial;
   font-size: 14px;
   line-height: 18px;
   color: $specialDarkGrey;
 }
 
 .programs__link {
-  font-family: "Oswald", "Arial", sans-serif;
   text-transform: uppercase;
   padding: 15px;
   color: $basicBlack;
