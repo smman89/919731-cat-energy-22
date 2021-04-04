@@ -13,14 +13,13 @@ input[type="range"] {
   -webkit-appearance: none;
   background-color: $basicWhite;
   border-radius: 6px;
-  border: 1px solid #cdcdcd;
+  border: 1px solid $specialGrey;
   outline: none;
 }
 
 input[type="range"]::-webkit-slider-runnable-track {
   height: 6px;
   -webkit-appearance: none;
-  color: #13bba4;
   margin: 3px;
 }
 
