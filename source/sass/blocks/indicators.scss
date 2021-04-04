@@ -1,0 +1,31 @@
+.indicators__number {
+  font-size: 24px;
+  text-transform: uppercase;
+  color: $basicBlack;
+  text-align: center;
+  padding-top: 15px;
+}
+
+.indicators__description {
+  background-color: $lightGrey2;
+  padding: 6px;
+  width: 70px;
+  text-align: center;
+  font-size: 12px;
+  position: relative;
+  left: -20px;
+}
+
+.indicators__item {
+  border: 1px solid $specialGrey2;
+  border-radius: 3px;
+  width: 124px;
+  height: 56px;
+  margin: 20px;
+
+  &--full {
+    border: none;
+    text-transform: uppercase;
+    font-size: 14px;
+  }
+}

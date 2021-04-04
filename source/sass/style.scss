@@ -1,1 +1,22 @@
-// Начните писать стили здесь
+//Vendor
+@import "vendor/normolize.scss";
+
+// Global
+@import "global/variables.scss";
+@import "global/fonts.scss";
+@import "global/utils.scss";
+@import "global/reboot.scss";
+@import "global/container.scss";
+
+// Blocks
+@import "blocks/button.scss";
+@import "blocks/contacts.scss";
+@import "blocks/difference.scss";
+@import "blocks/example.scss";
+@import "blocks/footer.scss";
+@import "blocks/hero.scss";
+@import "blocks/indicators.scss";
+@import "blocks/programs.scss";
+@import "blocks/works.scss";
+@import "blocks/main-nav.scss";
+@import "blocks/slider.scss";

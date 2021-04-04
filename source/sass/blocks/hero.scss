@@ -1,0 +1,33 @@
+.hero__wrapper {
+  background-image: linear-gradient(to top, rgba($basicGreen, 0.85), rgba($basicGreen, 0.85)),
+    url("../img/hero-cat.png");
+  background-repeat: no-repeat, no-repeat;
+  height: 280px;
+  margin-bottom: 150px;
+}
+
+.hero__title {
+  font-weight: 400;
+  color: $basicWhite;
+  text-transform: none;
+  text-align: center;
+  margin-top: 27px;
+  font-size: 36px;
+  line-height: 36px;
+}
+
+.hero__slogan {
+  text-transform: uppercase;
+  color: $basicWhite;
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 29px;
+
+  &::after {
+    background: url("../img/hero.png") no-repeat;
+    content: "";
+    display: block;
+    width: 280px;
+    height: 270px;
+  }
+}

@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Кэт энерджи</title>
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body class="page-body">
@@ -11,19 +12,20 @@
   <header class="page-header">
     <a class="page-header__logo">
       <img src="img/logo.svg" alt="Функциональное питание для котов" height="38" width="34">
+      <img src="img/cat-energy-logo.png" alt="Cat Energy" width="128" height="24">
     </a>
     <nav class="main-nav">
       <button type="button" class="main-nav__toggle" aria-label="Показать/скрыть меню"></button>
       <div class="container">
         <ul class="main-nav__list">
           <li class="main-nav__item main-nav__item--active">
-            <a>Главная</a>
+            <a class="main-nav__link">Главная</a>
           </li>
           <li class="main-nav__item">
-            <a href="catalog.html">Каталог продукции</a>
+            <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
           </li>
           <li class="main-nav__item">
-            <a href="programs.html">Подбор программы</a>
+            <a class="main-nav__link" href="programs.html">Подбор программы</a>
           </li>
         </ul>
       </div>
@@ -33,7 +35,7 @@
   <main class="page-main">
     <h1 class="visually-hidden">Cat Energy - Функциональное питание для котов</h1>
     <section class="hero">
-      <div class="container">
+      <div class="hero__wrapper container">
         <h2 class="hero__title">Функциональное питание для котов</h2>
         <p class="hero__slogan">Занялся собой? Займись котом!</p>
         <a class="button">Подобрать программу</a>
@@ -62,7 +64,7 @@
     </section>
 
     <section class="works container">
-      <h2 class="works__header">Как это работает</h2>
+      <h2 class="works__title">Как это работает</h2>
       <ul class="works__list">
         <li class="works__item works__item--leaf">
           <p class="works__description">Функциональное питание содержит только полезные питательные вещества.
@@ -117,9 +119,9 @@
             </li>
           </ul>
           <div class="difference__toggles slider__toggles">
-            <button class="slider__toggles slider__toggles--current" type="button">Было</button>
+            <button class="slider__toggle slider__toggle--current" type="button">Было</button>
             <input class="slider__range" type="range" aria-label="Переключить фотографию">
-            <button class="slider__toggles" type="button">Стало</button>
+            <button class="slider__toggle" type="button">Стало</button>
           </div>
         </div>
       </div>

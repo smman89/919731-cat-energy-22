@@ -1,0 +1,41 @@
+.slider__toggle {
+  border: none;
+  text-transform: uppercase;
+  background: transparent;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+input[type="range"] {
+  overflow: hidden;
+  width: 82px;
+  appearance: none;
+  background-color: $basicWhite;
+  border-radius: 6px;
+  border: 1px solid $specialGrey;
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 6px;
+  appearance: none;
+  margin: 3px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  height: 6px;
+  width: 35px;
+  border-radius: 6px;
+  cursor: ew-resize;
+  background: $basicGreen;
+  box-shadow: -80px 0 0 80px $basicWhite;
+}
+
+input[type="range"]::-moz-range-progress {
+  background-color: $basicWhite;
+}
+
+input[type="range"]::-moz-range-track {
+  background-color: $basicGreen;
+}
