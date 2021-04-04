@@ -2,6 +2,17 @@
   list-style: none;
 }
 
+.main-nav__toggle {
+  background-image: url("../img/nav-toggle-close.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: $basicWhite;
+  width: 20px;
+  height: 20px;
+  border: none;
+  outline: none;
+}
+
 .main-nav__item {
   padding: 24px;
   border-bottom: 1px solid $lightGrey3;

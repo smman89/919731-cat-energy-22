@@ -5,6 +5,7 @@
 .programs__item {
   background-color: $basicGrey;
   padding: 20px;
+  margin-bottom: 20px;
 
   &--lean::before {
     background: url("../img/cat-lean.svg") no-repeat;
@@ -39,9 +40,14 @@
 
 .programs__description {
   padding-bottom: 23px;
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  color: $specialDarkGrey;
 }
 
 .programs__link {
+  font-family: "Oswald", "Arial", sans-serif;
   text-transform: uppercase;
   padding: 15px;
   color: $basicBlack;
