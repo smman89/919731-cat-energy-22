@@ -1,0 +1,41 @@
+.field__label {
+  text-transform: uppercase;
+  display: block;
+}
+
+.field__input {
+  height: 50px;
+  border: 1px solid $lightGrey4;
+  padding-left: 16px;
+  color: $specialDarkGrey;
+  font-family: $font-family--oswald;
+  font-size: 20px;
+  line-height: 30px;
+  text-transform: uppercase;
+
+  &[type="email"] {
+    background-image: url("../img/icon-email.svg");
+    background-position: right 16px bottom 50%;
+    background-repeat: no-repeat;
+    padding-right: 40px;
+  }
+
+  &[type="tel"] {
+    background-image: url("../img/icon-phone.svg");
+    background-position: right 13px bottom 50%;
+    background-repeat: no-repeat;
+    padding-right: 40px;
+  }
+
+  &:hover {
+    border: 1px solid $specialGrey;
+  }
+
+  &:focus {
+    border: 1px solid $specialDarkGrey;
+  }
+
+  &:invalid {
+    border: 2px solid $statusError;
+  }
+}

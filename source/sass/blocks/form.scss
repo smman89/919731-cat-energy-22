@@ -1,0 +1,19 @@
+.form__about,
+.form__program {
+  border: none;
+  border-bottom: 1px solid $lightGrey;
+  padding-bottom: 20px;
+}
+
+.form__additional,
+.form__comment,
+.form__contacts {
+  border: none;
+  border-top: 2px solid $basicGreen;
+}
+
+.form__legend {
+  margin-left: -20px;
+  padding-left: 20px;
+  padding-right: 14px;
+}
