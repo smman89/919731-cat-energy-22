@@ -1,0 +1,15 @@
+.catalog__item {
+  border-bottom: 1px solid $specialGrey2;
+}
+
+.catalog__title {
+  font-size: 16;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: $specialDarkGrey2;
+  font-weight: 400;
+}
+
+.catalog__link {
+  text-decoration: none;
+}

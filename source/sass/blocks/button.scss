@@ -4,11 +4,7 @@
   color: $basicWhite;
   background-color: $basicGreen;
   border: none;
-
-  &--grey {
-    color: $specialDarkGrey;
-    background-color: $basicGrey;
-  }
+  text-decoration: none;
 
   &:hover {
     background-color: $basicGreen2;
@@ -16,5 +12,15 @@
 
   &:active {
     opacity: 0.3;
+  }
+
+  &--grey {
+    color: $specialDarkGrey;
+    background-color: $basicGrey;
+  }
+
+  &--grey:hover {
+    color: $specialDarkGrey;
+    background-color: $basicGrey;
   }
 }
