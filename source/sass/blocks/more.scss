@@ -1,0 +1,32 @@
+.more {
+  position: relative;
+}
+
+.more::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 145px;
+  top: 25px;
+  width: 30px;
+  height: 30px;
+  background-image: url("../img/plus.svg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.more__title {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 20px;
+  color: $specialBlack;
+}
+
+.more__subtitle {
+  text-align: center;
+  font-size: 12px;
+  line-height: 16px;
+  font-family: $font-family--arial;
+  color: $specialDarkGrey;
+}
