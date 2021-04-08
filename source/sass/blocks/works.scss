@@ -1,5 +1,21 @@
 .works__list {
   list-style: none;
+  display: grid;
+  row-gap: 20px;
+  grid-template-columns: 1fr;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    column-gap: 60px;
+    row-gap: 134px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: $desktop-width) {
+    column-gap: 80px;
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 .works__title {
@@ -9,40 +25,43 @@
 }
 
 .works__item {
-  &--leaf::before {
-    background: url("../img/works/leaf.svg") no-repeat;
+  display: grid;
+  column-gap: 20px;
+  grid-template-columns: auto auto;
+
+  @media (min-width: $tablet-width) {
+    row-gap: 31px;
+    grid-template-columns: 1fr;
+  }
+
+  &::before {
     content: "";
     display: block;
-    width: auto;
+    width: 60px;
     height: 60px;
+  }
+
+  &--leaf::before {
+    background: url("../img/works/leaf.svg") no-repeat;
   }
 
   &--water::before {
     background: url("../img/works/watter.svg") no-repeat;
-    content: "";
-    display: block;
-    width: auto;
-    height: 60px;
   }
 
   &--nutrition::before {
     background: url("../img/works/nutrition.svg") no-repeat;
-    content: "";
-    display: block;
-    width: auto;
-    height: 60px;
   }
 
   &--clock::before {
     background: url("../img/works/clock.svg") no-repeat;
-    content: "";
-    display: block;
-    width: auto;
-    height: 60px;
   }
 }
 
 .works__description {
+  max-width: 250px;
+  margin: 0;
+  padding: 0;
   display: inline-block;
   font-family: $font-family--arial;
   font-size: 14px;

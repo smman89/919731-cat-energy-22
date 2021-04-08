@@ -1,26 +1,102 @@
 .programs__list {
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    column-gap: 80px;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .programs__item {
   background-color: $basicGrey;
   padding: 20px;
   margin-bottom: 20px;
+  height: 374px;
+  display: grid;
+  grid-template-areas:
+    "logo title"
+    "description description"
+    "link link";
+  grid-template-columns: auto 1fr;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-areas:
+      "title ."
+      "description logo"
+      "link .";
+
+    grid-template-columns: 1fr auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-areas:
+      "logo title"
+      "description description"
+      "link link";
+  }
+
+  &::before {
+    grid-area: logo;
+    content: "";
+    display: block;
+    height: 53px;
+    width: 70px;
+  }
 
   &--lean::before {
     background: url("../img/cat-lean.svg") no-repeat;
-    content: "";
-    display: block;
-    width: auto;
-    height: 53px;
   }
 
   &--fat::before {
     background: url("../img/cat-fat.svg") no-repeat;
-    content: "";
-    display: block;
-    width: auto;
-    height: 53px;
+  }
+}
+
+.programs__title {
+  grid-area: title;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+
+.programs__description {
+  grid-area: description;
+  padding-bottom: 23px;
+  font-family: $font-family--arial;
+  font-size: 14px;
+  line-height: 18px;
+  color: $specialDarkGrey;
+
+  @media (min-width: $tablet-width) {
+    line-height: 24px;
+  }
+}
+
+.programs__link {
+  grid-area: link;
+
+  text-transform: uppercase;
+  padding-top: 15px;
+  color: $basicBlack;
+  text-decoration: none;
+  border-top: 1px solid $lightGrey;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
   }
 
   &::after {
@@ -32,28 +108,4 @@
     width: 32px;
     height: 10px;
   }
-}
-
-.programs__title {
-  display: inline-block;
-  text-transform: uppercase;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 20px;
-}
-
-.programs__description {
-  padding-bottom: 23px;
-  font-family: $font-family--arial;
-  font-size: 14px;
-  line-height: 18px;
-  color: $specialDarkGrey;
-}
-
-.programs__link {
-  text-transform: uppercase;
-  padding: 15px;
-  color: $basicBlack;
-  text-decoration: none;
-  border-top: 1px solid $lightGrey;
 }

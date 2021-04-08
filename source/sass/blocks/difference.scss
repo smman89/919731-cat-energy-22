@@ -1,3 +1,9 @@
+.differrence {
+  grid-column: 2/3;
+  grid-row: 1/-1;
+  display: block;
+}
+
 .difference__list {
   list-style: none;
 }

@@ -3,20 +3,21 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
   <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body class="page-body">
 
-  <header class="page-header">
+  <header class="page-header container">
     <a class="page-header__logo">
       <img src="img/logo.svg" alt="Функциональное питание для котов" height="38" width="34">
       <img src="img/cat-energy-logo.png" alt="Cat Energy" width="128" height="24">
     </a>
     <nav class="main-nav">
       <button type="button" class="main-nav__toggle" aria-label="Показать/скрыть меню"></button>
-      <div class="container">
+      <div class="main-nav__wrapper ">
         <ul class="main-nav__list">
           <li class="main-nav__item main-nav__item--active">
             <a class="main-nav__link">Главная</a>
@@ -34,8 +35,8 @@
 
   <main class="page-main">
     <h1 class="visually-hidden">Cat Energy - Функциональное питание для котов</h1>
-    <section class="hero">
-      <div class="hero__wrapper container">
+    <section class="hero container">
+      <div class="hero__wrapper ">
         <h2 class="hero__title">Функциональное питание для котов</h2>
         <p class="hero__slogan">Занялся собой? Займись котом!</p>
         <a class="button">Подобрать программу</a>
@@ -86,7 +87,7 @@
     </section>
 
     <section class="example">
-      <div class="container">
+      <div class="container example__wrapper">
         <h2 class="example__title">Живой пример</h2>
         <p class="example__description">
           Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без
@@ -128,7 +129,7 @@
     </section>
 
     <section class="contact">
-      <div class="container">
+      <div class="container contact__container">
         <h2 class="visually-hidden">Наши контакты</h2>
         <p class="contact__slogan">Приглашаем к сотрудничеству дилеров</p>
         <address class="contact__address"><span>ул. Большая Конюшенная, д. 19/8</span><span>Санкт-Петербург</span>
@@ -140,27 +141,27 @@
   </main>
 
   <footer class="page-footer">
-    <div class="container">
+    <div class="container page-footer__container">
       <a class="page-footer__logo">
         <img src="img/cat-energy-logo.png" alt="Cat Energy" width="128" height="24">
       </a>
       <ul class="page-footer__social social-list">
         <li class="social-list__item">
-          <a href="https://faceboock.com/htmlacademy" class="social-list__link" aria-label="Вконтакте">
+          <a class="social-list__link" href="https://faceboock.com/htmlacademy" aria-label="Вконтакте">
             <svg width="23" height="16" aria-hidden="true">
               <use xlink:href="#vkontakte-icon"></use>
             </svg>
           </a>
         </li>
         <li class="social-list__item">
-          <a href="https://instagram.com/htmlacademy" class="social-list__link" aria-label="Instagram">
+          <a class="social-list__link" href="https://instagram.com/htmlacademy" aria-label="Instagram">
             <svg width="16" height="16" aria-hidden="true">
               <use xlink:href="#instagram-icon"></use>
             </svg>
           </a>
         </li>
         <li class="social-list__item">
-          <a href="https://vk.com/htmlacademy" class="social-list__link" aria-label="Facebook">
+          <a class="social-list__link" href="https://vk.com/htmlacademy" aria-label="Facebook">
             <svg width="22" height="22" aria-hidden="true">
               <use xlink:href="#facebook-icon"></use>
             </svg></a>

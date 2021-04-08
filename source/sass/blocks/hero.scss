@@ -1,19 +1,65 @@
+.hero {
+  height: 480px;
+
+  @media (min-width: $tablet-width) {
+    height: 850px;
+  }
+
+  @media (min-width: $desktop-width) {
+    &::before {
+      content: "";
+      height: 696px;
+      background-image: linear-gradient(to top, rgba($basicGreen, 0.85), rgba($basicGreen, 0.85)),
+        url("../img/hero-cat-2.jpg");
+      background-repeat: no-repeat, no-repeat;
+      background-size: 720px 694px;
+      position: absolute;
+      width: 50vw;
+      top: 0;
+      right: 0;
+      z-index: -1;
+    }
+  }
+}
+
 .hero__wrapper {
-  background-image: linear-gradient(to top, rgba($basicGreen, 0.85), rgba($basicGreen, 0.85)),
-    url("../img/hero-cat.png");
-  background-repeat: no-repeat, no-repeat;
-  height: 280px;
-  margin-bottom: 150px;
+  @media (max-width: $mobile-width) {
+    background-image: linear-gradient(to top, rgba($basicGreen, 0.85), rgba($basicGreen, 0.85)),
+      url("../img/hero-cat.png");
+    background-repeat: no-repeat, no-repeat;
+    height: 280px;
+    margin-bottom: 150px;
+  }
+
+  @media (min-width: $tablet-width) {
+    background: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    max-height: 500px;
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .hero__title {
   font-weight: 400;
   color: $basicWhite;
-  text-transform: none;
   text-align: center;
   margin-top: 27px;
   font-size: 36px;
   line-height: 36px;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    width: 414px;
+    text-align: left;
+    font-weight: 400;
+    color: $basicBlack;
+    margin-top: 27px;
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .hero__slogan {
@@ -29,5 +75,34 @@
     display: block;
     width: 280px;
     height: 270px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: row;
+  }
+
+  @media (min-width: $tablet-width) {
+    color: $basicBlack;
+    margin-top: 25px;
+    text-align: left;
+    margin-bottom: 29px;
+    font-size: 20px;
+    line-height: 20px;
+
+    &::after {
+      background-size: 709px 609px;
+      width: 709px;
+      height: 609px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+    margin-bottom: 29px;
+
+    &::after {
+      background-size: 552px 499px;
+    }
   }
 }

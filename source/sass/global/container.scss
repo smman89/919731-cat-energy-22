@@ -3,4 +3,14 @@
   margin: 0 auto;
   max-width: 320px;
   padding: 0 20px;
+
+  @media (min-width: $tablet-width) {
+    max-width: $tablet-width;
+    padding: 0 29px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: $desktop-width;
+    padding: 0 110px;
+  }
 }
