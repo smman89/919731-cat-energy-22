@@ -2,11 +2,11 @@
 @import "vendor/normolize.scss";
 
 // Global
+@import "global/variables.scss";
 @import "global/container.scss";
 @import "global/fonts.scss";
 @import "global/reboot.scss";
 @import "global/utils.scss";
-@import "global/variables.scss";
 
 // Blocks
 @import "blocks/about-list.scss";
@@ -37,3 +37,4 @@
 @import "blocks/social-list.scss";
 @import "blocks/textarea.scss";
 @import "blocks/works.scss";
+@import "blocks/map.scss";

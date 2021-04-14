@@ -1,3 +1,8 @@
+.contact {
+  position: relative;
+  display: block;
+}
+
 .contact__container {
   display: flex;
   flex-direction: row;
@@ -8,9 +13,12 @@
   }
 
   @media (min-width: $desktop-width) {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 80px;
+    width: 570px;
+    background-color: $basicWhite;
+    height: 201px;
+    position: absolute;
+    padding: 66px;
+    top: 95px;
   }
 }
 

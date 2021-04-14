@@ -1,5 +1,16 @@
 .indicators {
-  grid-column: 1/2;
+  background-color: $lightGrey2;
+
+  @media (min-width: $tablet-width) {
+    background-color: $basicWhite;
+    padding-bottom: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1/2;
+    background-color: $lightGrey2;
+    padding-bottom: 0;
+  }
 }
 
 .indicators__list {
@@ -8,11 +19,13 @@
   }
 
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
 }
 
 .indicators__item {
+  &:first-child {
+    margin-right: 42px;
+  }
   margin-top: 25px;
   border: 1px solid $specialGrey2;
   border-radius: 3px;
@@ -65,6 +78,15 @@
 
 .indicators__description {
   background-color: $lightGrey2;
+
+  @media (min-width: $tablet-width) {
+    background-color: $basicWhite;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-color: $lightGrey2;
+  }
+
   margin-top: 6px;
   padding: 0 6px;
   width: 70px;

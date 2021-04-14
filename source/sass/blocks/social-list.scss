@@ -1,7 +1,27 @@
 .social-list {
-  max-width: 130px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  list-style: none;
+}
+
+.social-list__link {
+  color: $specialDarkGrey2;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 33px;
+  height: 33px;
+
+  &:hover,
+  &:focus {
+    color: $basicGreen;
+  }
+
+  &:active {
+    color: $basicGreen;
+    opacity: 0.3;
+  }
 }
