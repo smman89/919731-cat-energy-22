@@ -1,5 +1,32 @@
 .main-nav__list {
   list-style: none;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    width: 440px;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    width: 478px;
+    justify-content: space-between;
+  }
+}
+
+.main-nav__wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 53px;
+  }
 }
 
 .main-nav__toggle {
@@ -11,15 +38,38 @@
   height: 20px;
   border: none;
   outline: none;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .main-nav__item {
   padding: 24px;
   border-bottom: 1px solid $lightGrey3;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 0 10px 0;
+    border: none;
+
+    &--active {
+      border-bottom: 2px solid $basicGreen;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 0 10px 0;
+    border: none;
+
+    &--active {
+      border-bottom: 2px solid $basicWhite;
+    }
+  }
 }
 
 .main-nav__link {
+  white-space: nowrap;
   color: $basicBlack;
   text-decoration: none;
   text-transform: uppercase;
@@ -27,4 +77,17 @@
   font-weight: 500;
   font-size: 20px;
   line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: $basicWhite;
+  }
 }

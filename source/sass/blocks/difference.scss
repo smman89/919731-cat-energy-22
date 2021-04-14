@@ -1,7 +1,42 @@
-.difference__list {
-  list-style: none;
+.difference {
+  @media (min-width: $desktop-width) {
+    grid-column: 2/3;
+    grid-row: 1/-1;
+    transform: none;
+    margin: 0;
+  }
 }
 
-.difference__item:last-child {
-  display: none;
+.difference__image {
+  @media (min-width: $tablet-width) {
+    width: 708px;
+    height: 620px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: auto;
+    height: 536px;
+  }
+}
+
+.difference__list {
+  list-style: none;
+  padding: 0;
+}
+
+.difference__item {
+  &:last-child {
+    display: none;
+  }
+}
+
+.difference__toggles {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 50px;
+  }
 }

@@ -1,20 +1,52 @@
+.contact {
+  position: relative;
+  display: block;
+}
+
+.contact__container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 570px;
+    background-color: $basicWhite;
+    height: 201px;
+    position: absolute;
+    padding: 66px;
+    top: 95px;
+  }
+}
+
 .contact--grey {
   background-color: $basicGrey;
 }
 
 .contact__slogan {
+  grid-column: 1/2;
   text-transform: uppercase;
   color: $specialBlack;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 18px;
+  max-width: 170px;
 }
 
 .contact__address {
+  grid-column: 2/3;
+  max-width: 160px;
   color: $specialDarkGrey;
   font-style: normal;
   font-family: $font-family--arial;
   font-size: 14px;
   line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    text-align: right;
+  }
 }

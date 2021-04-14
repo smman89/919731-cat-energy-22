@@ -1,3 +1,73 @@
+.indicators {
+  background-color: $lightGrey2;
+
+  @media (min-width: $tablet-width) {
+    background-color: $basicWhite;
+    padding-bottom: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1/2;
+    background-color: $lightGrey2;
+    padding-bottom: 0;
+  }
+}
+
+.indicators__list {
+  @media (min-width: $desktop-width) {
+    max-width: 366px;
+  }
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.indicators__item {
+  &:first-child {
+    margin-right: 42px;
+  }
+  margin-top: 25px;
+  border: 1px solid $specialGrey2;
+  border-radius: 3px;
+  height: 56px;
+}
+
+.indicators__item--full {
+  display: flex;
+  align-items: center;
+
+  flex-grow: 1;
+  justify-content: center;
+  border: none;
+  text-transform: uppercase;
+  font-size: 14px;
+
+  @media (min-width: $tablet-width) {
+    justify-content: flex-end;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 55px;
+    justify-content: flex-start;
+  }
+
+  .indicators__description {
+    display: block;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    left: 0;
+    width: auto;
+  }
+
+  .indicators__number {
+    display: block;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+  }
+}
+
 .indicators__number {
   font-size: 24px;
   text-transform: uppercase;
@@ -8,24 +78,20 @@
 
 .indicators__description {
   background-color: $lightGrey2;
-  padding: 6px;
+
+  @media (min-width: $tablet-width) {
+    background-color: $basicWhite;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-color: $lightGrey2;
+  }
+
+  margin-top: 6px;
+  padding: 0 6px;
   width: 70px;
   text-align: center;
   font-size: 12px;
   position: relative;
   left: -20px;
-}
-
-.indicators__item {
-  border: 1px solid $specialGrey2;
-  border-radius: 3px;
-  width: 124px;
-  height: 56px;
-  margin: 20px;
-
-  &--full {
-    border: none;
-    text-transform: uppercase;
-    font-size: 14px;
-  }
 }
