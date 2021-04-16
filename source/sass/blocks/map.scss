@@ -3,8 +3,13 @@
   height: 362px;
 
   @media (min-width: $tablet-width) {
-    height: 400px;
+    min-height: 400px;
     z-index: -2;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
+    min-height: 100%;
   }
 }
 

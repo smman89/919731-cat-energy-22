@@ -1,3 +1,15 @@
 .about-list {
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+
+  @media (min-width: $desktop-width) {
+    grid-area: "about";
+  }
+}
+
+.about-list__item {
+  flex-grow: 1;
+  margin-bottom: 13px;
 }

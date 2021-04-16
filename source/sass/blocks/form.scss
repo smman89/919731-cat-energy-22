@@ -1,19 +1,133 @@
+.form__about-and-program {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 80px;
+  }
+}
+
 .form__about,
 .form__program {
   border: none;
-  border-bottom: 1px solid $lightGrey;
-  padding-bottom: 20px;
+  position: relative;
+  padding: 0;
+
+  @media (max-width: $mobile-width) {
+    &::after {
+      content: "";
+      position: absolute;
+      height: 2px;
+      width: 100vw;
+      left: -20px;
+      bottom: 0;
+      background-color: $lightGrey;
+    }
+  }
 }
 
 .form__additional,
 .form__comment,
 .form__contacts {
+  margin-top: 26px;
   border: none;
-  border-top: 2px solid $basicGreen;
+  padding: 0;
 }
 
 .form__legend {
-  margin-left: -20px;
-  padding-left: 20px;
-  padding-right: 14px;
+  position: relative;
+  display: inline-flex;
+  margin-bottom: 35px;
+  font-family: $font-family--oswald;
+  font-size: 24px;
+  line-height: 26px;
+  width: auto;
+
+  @media (max-width: $mobile-width) {
+    &::after {
+      right: -14px;
+      content: "";
+      top: 15px;
+      position: absolute;
+      transform: translateX(100%);
+      height: 2px;
+      width: 100vw;
+      background-color: $basicGreen;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    &::before {
+      left: -37px;
+      content: "";
+      top: 15px;
+      position: absolute;
+      transform: translateX(-100%);
+      height: 2px;
+      width: 100vw;
+      background-color: $basicGreen;
+    }
+
+    &::after {
+      content: "";
+      right: -37px;
+      top: 15px;
+      position: absolute;
+      transform: translateX(100%);
+      height: 2px;
+      width: 100vw;
+      background-color: $basicGreen;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 36px;
+    line-height: 36px;
+
+    &::before {
+      left: -40px;
+      top: 22px;
+    }
+
+    &::after {
+      right: -40px;
+      top: 22px;
+    }
+  }
+}
+
+.form__footer {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 32px;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 60px;
+    margin-bottom: 72px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 80px;
+    margin-bottom: 82px;
+  }
+}
+
+.form__description {
+  font-family: $font-family--arial;
+  font-size: 14px;
+  line-height: 16px;
+
+  @media (max-width: $mobile-width) {
+    text-align: center;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+  }
 }
