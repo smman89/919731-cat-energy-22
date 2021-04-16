@@ -10,40 +10,46 @@
 
 <body class="page-body">
 
-  <header class="page-header container">
-    <a class="page-header__logo">
-      <img src="img/logo.svg" alt="Функциональное питание для котов" height="38" width="34">
-      <img src="img/cat-energy-logo.png" alt="Cat Energy" width="128" height="24">
-    </a>
-    <nav class="main-nav">
-      <button type="button" class="main-nav__toggle" aria-label="Показать/скрыть меню"></button>
-      <div class="main-nav__wrapper ">
-        <ul class="main-nav__list">
-          <li class="main-nav__item main-nav__item--active">
-            <a class="main-nav__link">Главная</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="programs.html">Подбор программы</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </header>
+  <div class="intro">
+    <header class="page-header container">
+      <a class="page-header__logo">
+        <img src="img/logo.svg" alt="Функциональное питание для котов" height="38" width="34">
+        <img src="img/cat-energy-logo.png" alt="Cat Energy" width="128" height="24">
+      </a>
+      <nav class="main-nav">
+        <button type="button" class="main-nav__toggle" aria-label="Показать/скрыть меню"></button>
+        <div class="main-nav__wrapper ">
+          <ul class="main-nav__list">
+            <li class="main-nav__item main-nav__item--active ">
+              <a class="main-nav__link main-nav__link--white">Главная</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link main-nav__link--white" href="catalog.html">Каталог продукции</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link main-nav__link--white" href="programs.html">Подбор программы</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
 
-  <main class="page-main">
-    <h1 class="visually-hidden">Cat Energy - Функциональное питание для котов</h1>
-    <section class="hero">
-      <div class="hero__container container">
+    <section class="hero container">
+      <div class="hero__container ">
         <h2 class="hero__title">Функциональное питание для котов</h2>
         <p class="hero__slogan">Занялся собой? Займись котом!</p>
         <img class="hero__image" src="./img/hero.png" alt="Еда CAT ENERGY Pro">
         <a class="button button--wide">Подобрать программу</a>
       </div>
-
     </section>
+
+  </div>
+
+  <main class="page-main">
+    <h1 class="visually-hidden">Cat Energy - Функциональное питание для котов</h1>
+
+
+
     <section class="programs container">
       <h2 class="visually-hidden">Список программ</h2>
       <ul class="programs__list">

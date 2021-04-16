@@ -11,15 +11,12 @@
   }
 
   @media (min-width: $tablet-width) {
-    height: 872px;
+    // height: 872px;
   }
 
   @media (min-width: $desktop-width) {
-    height: 550px;
-
     &::before {
       content: "";
-      height: 696px;
       background-image: linear-gradient(to top, rgba($basicGreen, 0.85), rgba($basicGreen, 0.85)),
         url("../img/hero-cat-2.jpg");
       background-repeat: no-repeat;
@@ -28,7 +25,7 @@
       position: absolute;
       top: 0;
       right: 0;
-      bottom: 0;
+      height: 100%;
       z-index: -1;
       width: 50%;
     }
@@ -38,12 +35,14 @@
 .hero__container {
   @media (min-width: $tablet-width) {
     margin-top: 64px;
+    margin-left: 80px;
     position: relative;
   }
 
   @media (min-width: $desktop-width) {
     margin-top: 111px;
     position: relative;
+    margin-bottom: 200px;
   }
 }
 
@@ -93,18 +92,17 @@
   height: 270px;
 
   @media (min-width: $tablet-width) {
-    width: 709px;
+    width: 550px;
     height: auto;
     z-index: -2;
     position: absolute;
     top: 500;
-    left: 0;
   }
 
   @media (min-width: $desktop-width) {
     width: 552px;
-    height: 499px;
-    left: 40%;
+    height: auto;
+    left: 35%;
     top: -82px;
     position: absolute;
     z-index: 2;

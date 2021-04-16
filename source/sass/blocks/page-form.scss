@@ -1,3 +1,21 @@
+.page-form__slogan {
+  text-transform: uppercase;
+  font-family: $font-family--oswald;
+  font-size: 14px;
+  line-height: 18px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.page-form__wrapper {
+  @media (min-width: $tablet-width) {
+    padding: 0 37px;
+  }
+}
+
 .page-form__title {
   font-size: 36px;
   line-height: 36px;
