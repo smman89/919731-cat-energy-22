@@ -4,7 +4,7 @@
   flex-direction: column;
   justify-content: center;
   flex-basis: 1;
-
+  align-items: center;
   @media (min-width: $tablet-width) {
     justify-content: space-between;
   }
