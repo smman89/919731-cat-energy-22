@@ -1,6 +1,22 @@
-.price__units,
+.price {
+  display: flex;
+  justify-content: space-between;
+}
+
+.price__units {
+  font-size: 14px;
+  line-height: 14px;
+  font-family: $font-family--arial;
+}
+
 .price__amount {
   font-size: 14px;
   line-height: 14px;
   font-family: $font-family--arial;
+
+  @media (min-width: $desktop-width) {
+    display: inline;
+    min-width: 80px;
+    text-align: left;
+  }
 }

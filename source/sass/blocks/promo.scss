@@ -6,19 +6,40 @@
   background-repeat: no-repeat;
   position: relative;
   z-index: -1;
+
+  @media (min-width: $tablet-width) {
+    width: auto;
+    height: auto;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    padding: 57px 124px 69px 78px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 56px 43px 43px 43px;
+  }
 }
 
 .promo::before {
   content: "";
   display: block;
-  position: absolute;
-  top: 58px;
-  left: 101px;
+
   background-image: url("../img/gift.svg");
-  background-position: 50% 50%;
+  background-position: center;
+  background-repeat: no-repeat;
   z-index: 2;
-  width: 78px;
+  width: 80px;
   height: 80px;
+
+  @media (min-width: $desktop-width) {
+    width: auto;
+  }
 }
 
 .promo__slogan {
@@ -26,9 +47,15 @@
   line-height: 20px;
   font-family: $font-family--arial;
   color: $basicWhite;
-  position: absolute;
-  bottom: 43px;
-  left: 58px;
-  width: 161px;
+  width: auto;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    max-width: 161px;
+    text-align: left;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: center;
+  }
 }

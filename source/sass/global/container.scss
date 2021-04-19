@@ -10,7 +10,17 @@
   }
 
   @media (min-width: $desktop-width) {
-    min-width: $desktop-width;
+    max-width: $desktop-width;
     padding: 0 110px;
+  }
+
+  &--grey {
+    @media (max-width: $mobile-width) {
+      background-color: $basicGrey;
+    }
+
+    @media (max-width: $mobile-width) {
+      background-color: $basicGrey;
+    }
   }
 }

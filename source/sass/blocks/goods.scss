@@ -1,20 +1,101 @@
-.goods__list {
-  list-style: none;
+.goods {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 76px;
+  }
+}
+
+.goods__wrapper {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 896px 244px;
+    grid-template-areas:
+      "heading heading"
+      "goods promo";
+    gap: 80px;
+    margin-bottom: 86px;
+  }
 }
 
 .goods__item {
+  padding-top: 13px;
+  padding-bottom: 18px;
+  align-items: center;
+
+  display: grid;
+  grid-template-areas:
+    "title title"
+    "price price"
+    "button button";
   border-bottom: 1px solid $specialGrey;
+
+  @media (min-width: $tablet-width) {
+    grid-template-areas:
+      "title price"
+      "button button";
+    padding: 13px 38px 28px 38px;
+    border: 1px solid $specialGrey;
+    border-bottom: none;
+  }
+
+  &:last-child {
+    border-bottom: 1px solid $specialGrey;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 324px 324px auto;
+    grid-template-areas: "title price button";
+
+    border-right: none;
+    border-left: none;
+
+    padding: 15px 0;
+  }
+}
+
+.goods__list {
+  list-style: none;
+  padding: 0;
+
+  @media (min-width: $desktop-width) {
+    grid-area: goods;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
 }
 
 .goods__heading {
+  grid-area: "heading";
+  display: inline-flex;
   font-size: 24px;
   line-height: 24px;
   font-weight: 400;
+
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    margin: 0;
+  }
+}
+
+.goods__price {
+  grid-area: price;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .goods__title {
+  grid-area: title;
   font-size: 16px;
   line-height: 16px;
   font-weight: 400;
   text-transform: uppercase;
+}
+
+.goods__promo {
+  @media (min-width: $desktop-width) {
+    grid-area: promo;
+  }
 }
