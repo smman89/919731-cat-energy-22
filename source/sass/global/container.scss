@@ -19,8 +19,12 @@
       background-color: $basicGrey;
     }
 
-    @media (max-width: $mobile-width) {
+    @media (min-width: $tablet-width) {
       background-color: $basicGrey;
+    }
+
+    @media (min-width: $desktop-width) {
+      background-color: transparent;
     }
   }
 }
