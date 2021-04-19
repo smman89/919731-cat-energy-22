@@ -1,4 +1,5 @@
 .button {
+  grid-area: button;
   padding: 10px;
   text-transform: uppercase;
   text-align: center;
@@ -6,9 +7,10 @@
   background-color: $basicGreen;
   border: none;
   text-decoration: none;
-  display: inline;
+  display: inline-flex;
+  justify-content: center;
 
-  @media (min-width: $tablet-width) {
+  &--lg {
     font-size: 20px;
     line-height: 20px;
     padding: 14px 26px;

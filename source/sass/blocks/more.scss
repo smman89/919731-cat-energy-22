@@ -1,18 +1,35 @@
 .more {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-basis: 1;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    justify-content: space-between;
+  }
+  background-color: transparent;
+
+  @media (min-width: $tablet-width) {
+    border: 1px solid $basicGrey;
+  }
 }
 
 .more::before {
   content: "";
   display: block;
-  position: absolute;
-  left: 145px;
-  top: 25px;
+  margin: 0 auto;
   width: 30px;
   height: 30px;
   background-image: url("../img/plus.svg");
-  background-position: 50% 50%;
+  background-position: center;
   background-repeat: no-repeat;
+
+  @media (min-width: $tablet-width) {
+    width: 60px;
+    height: 60px;
+  }
 }
 
 .more__title {
@@ -21,6 +38,8 @@
   font-size: 16px;
   line-height: 20px;
   color: $specialBlack;
+  font-weight: 400;
+  font-family: $font-family--oswald;
 }
 
 .more__subtitle {

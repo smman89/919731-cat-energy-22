@@ -1,3 +1,12 @@
+.details {
+  grid-area: details;
+}
+
+.details__item {
+  display: flex;
+  justify-content: space-between;
+}
+
 .details__description,
 .details__term {
   font-size: 12px;

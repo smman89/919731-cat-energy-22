@@ -20,6 +20,8 @@
 
   @media (min-width: $tablet-width) {
     justify-content: space-between;
+    padding: 0 37px;
+    background-color: transparent;
   }
 
   @media (min-width: $desktop-width) {
