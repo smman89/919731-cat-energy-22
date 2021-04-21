@@ -17,18 +17,25 @@
 .page-footer__logo {
   text-align: center;
   padding: 32px 0;
+  border-bottom: 1px solid lightGrey;
+  width: 100%;
 
   @media (min-width: $tablet-width) {
     padding: 0;
+    border: none;
+    width: auto;
   }
 }
 
 .page-footer__social {
   display: flex;
   padding: 20px 0;
+  width: 100%;
+  border-bottom: 1px solid lightGrey;
 
   @media (min-width: $tablet-width) {
     padding: 0;
+    border: none;
   }
 }
 
@@ -41,6 +48,7 @@
 
   text-decoration: none;
   display: flex;
+  flex-direction: row;
   align-items: center;
 
   &:hover,
@@ -65,5 +73,6 @@
   font-size: 16px;
   line-height: 18px;
   display: block;
+  white-space: nowrap;
   padding-right: 20px;
 }

@@ -26,8 +26,8 @@
   flex-direction: column;
 
   @media (min-width: $desktop-width) {
-    align-items: center;
     display: grid;
+    align-items: center;
     grid-template-columns: 50% 50%;
     grid-column-gap: 80px;
     grid-template-rows: 205px 231px 231px;

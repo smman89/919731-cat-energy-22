@@ -116,6 +116,8 @@
   align-items: center;
 
   @media (min-width: $tablet-width) {
+    padding-top: 0;
+
     font-size: 20px;
     line-height: 30px;
     border: none;

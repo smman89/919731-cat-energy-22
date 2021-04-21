@@ -1,9 +1,6 @@
 .works {
-  margin-bottom: 11px;
-
   @media (min-width: $tablet-width) {
     position: relative;
-    padding-bottom: 150px;
 
     &::after {
       content: "";
@@ -18,8 +15,6 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-bottom: 50px;
-
     &::after {
       display: none;
     }
@@ -37,7 +32,7 @@
 
   @media (min-width: $tablet-width) {
     column-gap: 60px;
-    row-gap: 134px;
+    row-gap: 80px;
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -68,7 +63,11 @@
   @media (min-width: $tablet-width) {
     row-gap: 31px;
     grid-template-columns: 1fr;
+    min-height: 280px;
+    max-width: 250px;
   }
+  // @media (min-width: $desktop-width) {
+  // }
 
   &::before {
     content: "";
