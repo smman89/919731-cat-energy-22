@@ -4,6 +4,7 @@
   flex-direction: column;
   flex-grow: 1;
   padding: 0;
+  margin: 0;
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
@@ -38,32 +39,51 @@
   height: 20px;
   border: none;
   outline: none;
+  position: absolute;
+  right: 20px;
+  top: 25px;
 
   @media (min-width: $tablet-width) {
     display: none;
   }
 }
 
+@media (max-width: $mobile-width) {
+  .main-nav--closed .main-nav__toggle {
+    background-image: url("../img/nav-burger.svg");
+  }
+
+  .main-nav--closed .main-nav__wrapper {
+    display: none;
+  }
+
+  .main-nav--nojs .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav--nojs .main-nav__wrapper {
+    position: static;
+    min-height: 0;
+  }
+}
+
 .main-nav__item {
-  padding: 24px;
+  padding: 22px;
   position: relative;
 
   @media (max-width: $mobile-width) {
     text-align: center;
 
-    &::after {
+    &::before {
       content: "";
       position: absolute;
       height: 1px;
       width: 100vw;
-      left: -60px;
-      bottom: 0;
+      left: -30px;
+      top: 0;
       background-color: $lightGrey;
     }
   }
-
-  // border-bottom: 1px solid $lightGrey3;
-  // text-align: center;
 
   @media (min-width: $tablet-width) {
     padding: 0 0 10px 0;

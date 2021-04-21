@@ -1,5 +1,29 @@
 .works {
   margin-bottom: 11px;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    padding-bottom: 150px;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      height: 1px;
+      width: 100vw;
+      left: 0;
+      bottom: 0;
+      border: 1px solid $lightGrey3;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 50px;
+
+    &::after {
+      display: none;
+    }
+  }
 }
 
 .works__list {
@@ -9,6 +33,7 @@
   grid-template-columns: 1fr;
   margin: 0;
   padding: 0;
+  counter-reset: number 0;
 
   @media (min-width: $tablet-width) {
     column-gap: 60px;
@@ -26,12 +51,19 @@
   font-weight: 400;
   font-size: 24px;
   line-height: 26px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .works__item {
+  counter-increment: number;
   display: grid;
   column-gap: 20px;
-  grid-template-columns: auto auto;
+  grid-template-columns: 60px auto;
+  position: relative;
 
   @media (min-width: $tablet-width) {
     row-gap: 31px;
@@ -60,10 +92,23 @@
   &--clock::before {
     background: url("../img/works/clock.svg") no-repeat;
   }
+
+  @media (min-width: $tablet-width) {
+    &::after {
+      display: block;
+      content: counter(number);
+      position: absolute;
+      top: -40px;
+      left: 115px;
+      color: $basicGrey;
+      font-size: 280px;
+      line-height: 280px;
+      z-index: -2;
+    }
+  }
 }
 
 .works__description {
-  max-width: 250px;
   margin: 0;
   padding: 0;
   display: inline-block;
@@ -71,4 +116,9 @@
   font-size: 14px;
   line-height: 18px;
   color: $specialDarkGrey;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }

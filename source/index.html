@@ -13,10 +13,11 @@
   <div class="intro">
     <header class="page-header container">
       <a class="page-header__logo">
-        <img src="img/logo.svg" alt="Функциональное питание для котов" height="38" width="34">
-        <img src="img/cat-energy-logo.png" alt="Cat Energy" width="128" height="24">
+        <img class="page-header__logo-image" src="img/logo.svg" alt="Функциональное питание для котов" height="38"
+          width="34">
+        <img class="page-header__logo-brand" src="img/cat-energy-logo.png" alt="Cat Energy" width="128" height="24">
       </a>
-      <nav class="main-nav">
+      <nav class="main-nav main-nav--closed main-nav--nojs">
         <button type="button" class="main-nav__toggle" aria-label="Показать/скрыть меню"></button>
         <div class="main-nav__wrapper ">
           <ul class="main-nav__list">
@@ -39,7 +40,7 @@
         <h2 class="hero__title">Функциональное питание для котов</h2>
         <p class="hero__slogan">Занялся собой? Займись котом!</p>
         <img class="hero__image" src="./img/hero.png" alt="Еда CAT ENERGY Pro">
-        <a class="button ">Подобрать программу</a>
+        <a class="button button--wide">Подобрать программу</a>
       </div>
     </section>
 
@@ -47,9 +48,6 @@
 
   <main class="page-main">
     <h1 class="visually-hidden">Cat Energy - Функциональное питание для котов</h1>
-
-
-
     <section class="programs container">
       <h2 class="visually-hidden">Список программ</h2>
       <ul class="programs__list">
@@ -196,6 +194,22 @@
       </a>
     </div>
   </footer>
+  <script>
+    var navMain = document.querySelector('.main-nav');
+    var navToggle = document.querySelector('.main-nav__toggle');
+
+    navMain.classList.remove('main-nav--nojs');
+
+    navToggle.addEventListener('click', function () {
+      if (navMain.classList.contains('main-nav--closed')) {
+        navMain.classList.remove('main-nav--closed');
+        navMain.classList.add('main-nav--opened');
+      } else {
+        navMain.classList.add('main-nav--closed');
+        navMain.classList.remove('main-nav--opened');
+      }
+    });
+  </script>
 </body>
 
 </html>

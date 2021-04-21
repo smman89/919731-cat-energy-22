@@ -8,6 +8,10 @@
 }
 
 .difference__image {
+  @media (max-width: $mobile-width) {
+    margin: 0 auto;
+  }
+
   @media (min-width: $tablet-width) {
     width: 708px;
     height: 620px;
@@ -25,16 +29,17 @@
 }
 
 .difference__item {
+  display: flex;
+  justify-content: center;
+
   &:last-child {
     display: none;
   }
 }
 
 .difference__toggles {
-  @media (min-width: $tablet-width) {
-    display: flex;
-    justify-content: center;
-  }
+  display: flex;
+  justify-content: center;
 
   @media (min-width: $desktop-width) {
     padding-top: 50px;
