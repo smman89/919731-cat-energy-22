@@ -2,7 +2,7 @@
   list-style: none;
   display: flex;
   flex-direction: column;
-  margin: 0;
+  margin: 0 0 27px 0;
   padding: 0;
 
   @media (min-width: $desktop-width) {
@@ -16,8 +16,8 @@
   background-color: $basicGrey;
   padding: 20px;
   margin-bottom: 20px;
-  height: 374px;
   display: grid;
+  align-items: center;
   grid-template-areas:
     "logo title"
     "description description"
@@ -25,37 +25,53 @@
   grid-template-columns: auto 1fr;
 
   @media (min-width: $tablet-width) {
+    margin-bottom: 30px;
+    padding: 77px 62px 53px 52px;
     display: grid;
     grid-template-areas:
       "title ."
       "description logo"
       "link .";
-
-    grid-template-columns: 1fr auto;
   }
 
   @media (min-width: $desktop-width) {
+    padding: 41px 51px 55px 52px;
     display: grid;
     grid-template-areas:
       "logo title"
       "description description"
-      "link link";
+      "link .";
   }
 
   &::before {
     grid-area: logo;
+
     content: "";
     display: block;
     height: 53px;
     width: 70px;
+
+    @media (min-width: $tablet-width) {
+      height: 200px;
+      width: 270px;
+    }
+
+    @media (min-width: $desktop-width) {
+      height: 100px;
+      width: 170px;
+    }
   }
 
   &--lean::before {
     background: url("../img/cat-lean.svg") no-repeat;
+    background-size: contain;
+    background-position: left;
   }
 
   &--fat::before {
     background: url("../img/cat-fat.svg") no-repeat;
+    background-size: contain;
+    background-position: left;
   }
 }
 
@@ -65,6 +81,7 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
+  margin: 0;
 
   @media (min-width: $tablet-width) {
     font-size: 36px;
@@ -74,38 +91,63 @@
 
 .programs__description {
   grid-area: description;
-  padding-bottom: 23px;
+  padding: 22px 0;
+  margin: 0;
   font-family: $font-family--arial;
   font-size: 14px;
   line-height: 18px;
   color: $specialDarkGrey;
 
+  @media (max-width: $mobile-width) {
+    border-bottom: 1px solid $lightGrey;
+  }
+
   @media (min-width: $tablet-width) {
+    font-size: 16px;
     line-height: 24px;
   }
 }
 
 .programs__link {
   grid-area: link;
-
   text-transform: uppercase;
-  padding-top: 15px;
+  margin-top: 15px;
   color: $basicBlack;
   text-decoration: none;
-  border-top: 1px solid $lightGrey;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-right: auto;
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @media (min-width: $tablet-width) {
+    margin-top: 0;
     font-size: 20px;
     line-height: 30px;
+    border: none;
   }
 
   &::after {
     background-image: url("../img/arrow-right.svg");
     background-repeat: no-repeat;
     background-position: center;
+    margin-left: 15px;
     content: "";
-    display: inline-block;
-    width: 32px;
+    display: inline-flex;
+    width: 24px;
     height: 10px;
+
+    @media (min-width: $tablet-width) {
+      margin-left: 26px;
+    }
+  }
+
+  &:hover {
+    &::after {
+      width: 32px;
+    }
   }
 }

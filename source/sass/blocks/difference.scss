@@ -4,10 +4,17 @@
     grid-row: 1/-1;
     transform: none;
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
   }
 }
 
 .difference__image {
+  @media (max-width: $mobile-width) {
+    margin: 0 auto;
+  }
+
   @media (min-width: $tablet-width) {
     width: 708px;
     height: 620px;
@@ -22,21 +29,19 @@
 .difference__list {
   list-style: none;
   padding: 0;
+  margin-bottom: 0;
 }
 
 .difference__item {
+  display: flex;
+  justify-content: center;
+
   &:last-child {
     display: none;
   }
 }
 
 .difference__toggles {
-  @media (min-width: $tablet-width) {
-    display: flex;
-    justify-content: center;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding-top: 50px;
-  }
+  display: flex;
+  justify-content: center;
 }

@@ -1,4 +1,5 @@
 .example {
+  margin-top: 43px;
   position: relative;
 
   @media (max-width: $mobile-width) {
@@ -18,29 +19,43 @@
       z-index: -2;
     }
   }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 0;
+  }
 }
 
 .example__wrapper {
   display: flex;
   flex-direction: column;
+  padding-bottom: 25px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 67px;
+  }
 
   @media (min-width: $desktop-width) {
-    align-items: center;
     display: grid;
+    align-items: center;
     grid-template-columns: 50% 50%;
     grid-column-gap: 80px;
-    grid-template-rows: 205px 231px 231px;
+    grid-template-rows: 194px 235px 157px;
+    padding-bottom: 75px;
   }
 }
 
 .example__title {
-  margin: 0;
+  margin-top: 27px;
+  margin-bottom: 27px;
+
   font-weight: 400;
   font-size: 24px;
   line-height: 26px;
   text-align: left;
 
   @media (min-width: $tablet-width) {
+    margin-top: 0;
+    margin-bottom: 27px;
     font-weight: 400;
     font-size: 60px;
     line-height: 60px;

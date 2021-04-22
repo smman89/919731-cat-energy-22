@@ -1,6 +1,7 @@
 .page-header {
   display: flex;
   flex-direction: column;
+  position: relative;
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
@@ -10,16 +11,49 @@
 }
 
 .page-header__logo {
-  height: 66px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  width: 120px;
+  min-height: 66px;
+  position: relative;
+  cursor: pointer;
 
   @media (min-width: $tablet-width) {
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 174px;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.page-header__logo-image {
+  position: absolute;
+  left: 0;
+  top: 12px;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    display: block;
+    margin-right: 12px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-right: 14px;
+  }
+}
+
+.page-header__logo-brand {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  top: 24px;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    display: block;
   }
 }

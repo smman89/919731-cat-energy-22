@@ -10,10 +10,6 @@
     width: 100%;
   }
 
-  @media (min-width: $tablet-width) {
-    // height: 872px;
-  }
-
   @media (min-width: $desktop-width) {
     &::before {
       content: "";
@@ -33,6 +29,11 @@
 }
 
 .hero__container {
+  @media (max-width: $mobile-width) {
+    display: flex;
+    flex-direction: column;
+  }
+
   @media (min-width: $tablet-width) {
     margin-top: 64px;
     margin-left: 80px;
@@ -48,6 +49,7 @@
 
 .hero__title {
   margin: 0;
+  margin-top: 27px;
   font-weight: 400;
   color: $basicWhite;
   text-align: center;
@@ -90,13 +92,16 @@
 .hero__image {
   width: 280px;
   height: 270px;
+  margin: 0 auto;
 
   @media (min-width: $tablet-width) {
     width: 550px;
     height: auto;
     z-index: -2;
+
     position: absolute;
     top: 500;
+    margin: 0 auto;
   }
 
   @media (min-width: $desktop-width) {

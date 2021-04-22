@@ -17,18 +17,34 @@
 .page-footer__logo {
   text-align: center;
   padding: 32px 0;
+  border-bottom: 1px solid $lightGrey;
+  width: 100%;
+  cursor: pointer;
 
   @media (min-width: $tablet-width) {
     padding: 0;
+    border: none;
+    width: auto;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
   }
 }
 
 .page-footer__social {
   display: flex;
   padding: 20px 0;
+  width: 100%;
+  border-bottom: 1px solid $lightGrey;
 
   @media (min-width: $tablet-width) {
     padding: 0;
+    border: none;
   }
 }
 
@@ -41,10 +57,11 @@
 
   text-decoration: none;
   display: flex;
+  flex-direction: row;
   align-items: center;
+  color: #666666;
 
-  &:hover,
-  &:focus {
+  &:hover {
     color: $basicGreen;
   }
 
@@ -65,5 +82,6 @@
   font-size: 16px;
   line-height: 18px;
   display: block;
+  white-space: nowrap;
   padding-right: 20px;
 }

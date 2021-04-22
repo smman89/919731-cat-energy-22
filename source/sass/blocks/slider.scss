@@ -1,41 +1,110 @@
+.slider__toggles {
+  display: flex;
+  align-items: center;
+  margin: 0 20px;
+
+  @media (max-width: $mobile-width) {
+    min-height: 40px;
+
+    input[type="range"] {
+      margin: 0 15px;
+      overflow: hidden;
+      width: 82px;
+      height: 14px;
+      appearance: none;
+      background-color: $basicWhite;
+      border-radius: 6px;
+      border: 1px solid $specialGrey;
+    }
+
+    input[type="range"]::-webkit-slider-runnable-track {
+      height: 6px;
+      appearance: none;
+      margin: 3px;
+    }
+
+    input[type="range"]::-webkit-slider-thumb {
+      appearance: none;
+      height: 6px;
+      width: 35px;
+      border-radius: 6px;
+      cursor: ew-resize;
+      background: $basicGreen;
+      box-shadow: -80px 0 0 80px $basicWhite;
+    }
+
+    input[type="range"]::-moz-range-progress {
+      background-color: $basicWhite;
+    }
+
+    input[type="range"]::-moz-range-track {
+      background-color: $basicGreen;
+      width: auto;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    min-height: 32px;
+
+    input[type="range"] {
+      margin: 0 20px;
+      width: 428px;
+      height: 6px;
+      appearance: none;
+      background-color: #dcdcdc;
+      border-radius: 6px;
+    }
+
+    input[type="range"]::-webkit-slider-runnable-track {
+      width: 100%;
+      height: 16px;
+    }
+
+    input[type="range"]::-webkit-slider-thumb {
+      height: 34px;
+      width: 34px;
+      border-radius: 34px;
+      cursor: ew-resize;
+      background: $basicGreen;
+      appearance: none;
+      margin-top: -8px;
+      box-shadow: inset 0 0 0 13px white;
+      padding: 13px;
+      filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.16));
+
+      &:hover {
+        filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.19));
+      }
+
+      &:active {
+        filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.2));
+        border: 1px solid $basicGreen;
+      }
+    }
+  }
+}
+
 .slider__toggle {
   border: none;
   text-transform: uppercase;
   background: transparent;
   font-size: 16px;
   line-height: 20px;
+  padding: 0 0;
+  cursor: pointer;
 
-  input[type="range"] {
-    overflow: hidden;
-    width: 82px;
-    appearance: none;
-    background-color: $basicWhite;
-    border-radius: 6px;
-    border: 1px solid $specialGrey;
-    outline: none;
-  }
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.24);
 
-  input[type="range"]::-webkit-slider-runnable-track {
-    height: 6px;
-    appearance: none;
-    margin: 3px;
-  }
+    &:hover {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.24);
+      outline: none;
+    }
 
-  input[type="range"]::-webkit-slider-thumb {
-    appearance: none;
-    height: 6px;
-    width: 35px;
-    border-radius: 6px;
-    cursor: ew-resize;
-    background: $basicGreen;
-    box-shadow: -80px 0 0 80px $basicWhite;
-  }
-
-  input[type="range"]::-moz-range-progress {
-    background-color: $basicWhite;
-  }
-
-  input[type="range"]::-moz-range-track {
-    background-color: $basicGreen;
+    &:active {
+      border: none;
+    }
   }
 }
