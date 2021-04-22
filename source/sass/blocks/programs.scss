@@ -32,8 +32,6 @@
       "title ."
       "description logo"
       "link .";
-
-    grid-template-columns: 1fr auto;
   }
 
   @media (min-width: $desktop-width) {
@@ -42,11 +40,12 @@
     grid-template-areas:
       "logo title"
       "description description"
-      "link link";
+      "link .";
   }
 
   &::before {
     grid-area: logo;
+
     content: "";
     display: block;
     height: 53px;
@@ -59,20 +58,20 @@
 
     @media (min-width: $desktop-width) {
       height: 100px;
-      width: 140px;
+      width: 170px;
     }
   }
 
   &--lean::before {
     background: url("../img/cat-lean.svg") no-repeat;
     background-size: contain;
-    background-position: center;
+    background-position: left;
   }
 
   &--fat::before {
     background: url("../img/cat-fat.svg") no-repeat;
     background-size: contain;
-    background-position: center;
+    background-position: left;
   }
 }
 
@@ -99,6 +98,10 @@
   line-height: 18px;
   color: $specialDarkGrey;
 
+  @media (max-width: $mobile-width) {
+    border-bottom: 1px solid $lightGrey;
+  }
+
   @media (min-width: $tablet-width) {
     font-size: 16px;
     line-height: 24px;
@@ -108,16 +111,20 @@
 .programs__link {
   grid-area: link;
   text-transform: uppercase;
-  padding-top: 15px;
+  margin-top: 15px;
   color: $basicBlack;
   text-decoration: none;
-  border-top: 1px solid $lightGrey;
-  display: flex;
   align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-right: auto;
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @media (min-width: $tablet-width) {
-    padding-top: 0;
-
+    margin-top: 0;
     font-size: 20px;
     line-height: 30px;
     border: none;
@@ -130,7 +137,17 @@
     margin-left: 15px;
     content: "";
     display: inline-flex;
-    width: 32px;
+    width: 24px;
     height: 10px;
+
+    @media (min-width: $tablet-width) {
+      margin-left: 26px;
+    }
+  }
+
+  &:hover {
+    &::after {
+      width: 32px;
+    }
   }
 }

@@ -19,18 +19,28 @@
       z-index: -2;
     }
   }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 0;
+  }
 }
 
 .example__wrapper {
   display: flex;
   flex-direction: column;
+  padding-bottom: 25px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 67px;
+  }
 
   @media (min-width: $desktop-width) {
     display: grid;
     align-items: center;
     grid-template-columns: 50% 50%;
     grid-column-gap: 80px;
-    grid-template-rows: 205px 231px 231px;
+    grid-template-rows: 194px 235px 157px;
+    padding-bottom: 75px;
   }
 }
 

@@ -58,12 +58,13 @@
   }
 
   .main-nav--nojs .main-nav__toggle {
-    display: none;
+    background-image: url("../img/nav-toggle-close.svg");
   }
 
   .main-nav--nojs .main-nav__wrapper {
     position: static;
     min-height: 0;
+    display: block;
   }
 }
 
@@ -114,6 +115,14 @@
   font-weight: 500;
   font-size: 20px;
   line-height: 20px;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @media (min-width: $tablet-width) {
     font-weight: 400;
