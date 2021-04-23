@@ -9,6 +9,7 @@
   line-height: 18px;
 
   @media (min-width: $tablet-width) {
+    margin-bottom: 66px;
     font-size: 20px;
     line-height: 30px;
   }
@@ -18,4 +19,9 @@
   font-size: 36px;
   line-height: 36px;
   font-weight: 400;
+
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+  }
 }

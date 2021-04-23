@@ -1,20 +1,34 @@
 .program-list {
-  padding-bottom: 13px;
   padding-left: 0;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  flex-basis: 0;
+  margin: 0;
 
   @media (min-width: $tablet-width) {
     border: 1px solid $lightGrey;
+    min-height: 200px;
+    padding: 0;
   }
 
   @media (min-width: $desktop-width) {
     grid-area: "programs";
+    margin: 0;
   }
 }
 
 .program-list__item {
-  display: block;
-  margin-bottom: 13px;
-  padding-left: 0;
+  margin-bottom: 10px;
+  padding: 5px;
+  width: fit-content;
+
+  &:focus-within {
+    opacity: 1;
+    outline: solid;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-left: 0;
+  }
 }

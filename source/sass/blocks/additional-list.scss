@@ -1,6 +1,7 @@
 .additional-list {
   padding: 0;
   margin-bottom: 34px;
+  margin-top: 0;
 
   @media (min-width: $tablet-width) {
     display: grid;
@@ -12,7 +13,17 @@
   @media (min-width: $desktop-width) {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
     grid-column-gap: 80px;
     margin-bottom: 61px;
+  }
+}
+
+.additional-list__item {
+  margin-bottom: 13px;
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 16px;
   }
 }

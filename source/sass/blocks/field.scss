@@ -3,17 +3,22 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  font-size: 16px;
+  line-height: 18px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .field__input {
-  height: 50px;
+  min-height: 46px;
   width: 100%;
   border: 1px solid $lightGrey4;
   padding-left: 16px;
   color: $specialDarkGrey;
   font-family: $font-family--oswald;
-  font-size: 20px;
-  line-height: 30px;
   text-transform: uppercase;
   margin-left: 15px;
 
@@ -29,6 +34,10 @@
     background-position: right 13px bottom 50%;
     background-repeat: no-repeat;
     padding-right: 40px;
+  }
+
+  @media (min-width: $tablet-width) {
+    min-height: 52px;
   }
 
   &:hover {
