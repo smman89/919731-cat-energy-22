@@ -4,6 +4,7 @@
   flex-direction: column;
   padding: 0;
   margin: 0;
+
   @media (min-width: $desktop-width) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

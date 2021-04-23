@@ -22,10 +22,12 @@
   margin-bottom: 10px;
   padding: 5px;
   width: fit-content;
+
   &:focus-within {
     opacity: 1;
     outline: solid;
   }
+
   @media (max-width: $mobile-width) {
     margin-left: 0;
   }

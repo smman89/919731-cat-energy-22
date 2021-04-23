@@ -17,6 +17,7 @@
 
   @media (max-width: $mobile-width) {
     padding: 20px 0;
+
     &::after {
       content: "";
       position: absolute;
@@ -33,6 +34,7 @@
 .form__comment,
 .form__contacts {
   margin-top: 26px;
+
   @media (min-width: $tablet-width) {
     margin-top: 67px;
   }

@@ -1,12 +1,10 @@
 .checkbox {
   display: block;
   width: fit-content;
+
   &:focus-within {
     outline: solid;
   }
-  // display: flex;
-  // flex-direction: row;
-  // align-items: center;
 }
 
 .checkbox__input {
@@ -14,7 +12,6 @@
   position: absolute;
   appearance: none;
   z-index: -1;
-  opacity: 0.5;
   width: 40px;
   height: 40px;
   opacity: 0;
