@@ -2,14 +2,23 @@
   list-style: none;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   padding: 0;
-
+  margin: 0;
+  @media (min-width: $tablet-width) {
+    margin-bottom: 72px;
+  }
   @media (min-width: $desktop-width) {
     grid-area: "about";
+    min-height: 200px;
+    margin: 0;
   }
 }
 
 .about-list__item {
   flex-grow: 1;
-  margin-bottom: 13px;
+  margin-bottom: 14px;
+  @media (min-width: $desktop-width) {
+    margin-bottom: 20px;
+  }
 }

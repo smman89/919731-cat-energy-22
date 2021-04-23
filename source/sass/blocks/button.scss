@@ -9,11 +9,14 @@
   text-decoration: none;
   display: inline-flex;
   justify-content: center;
+  align-items: center;
 
   &--lg {
-    font-size: 20px;
-    line-height: 20px;
-    padding: 14px 26px;
+    @media (min-width: $tablet-width) {
+      font-size: 20px;
+      line-height: 20px;
+      padding: 14px 26px;
+    }
   }
 
   &:hover {
@@ -34,7 +37,7 @@
     background-color: $basicGrey;
   }
 
-  &--wide {
+  &--mobile-wide {
     @media (max-width: $mobile-width) {
       display: block;
       width: 100%;
