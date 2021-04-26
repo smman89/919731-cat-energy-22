@@ -40,6 +40,12 @@
   color: $specialBlack;
   font-weight: 400;
   font-family: $font-family--oswald;
+  max-width: 140px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 22px;
+  }
 }
 
 .more__subtitle {
@@ -48,4 +54,10 @@
   line-height: 16px;
   font-family: $font-family--arial;
   color: $specialDarkGrey;
+  max-width: 170px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 18px;
+  }
 }

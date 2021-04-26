@@ -57,11 +57,11 @@
     display: none;
   }
 
-  .main-nav--nojs .main-nav__toggle {
+  .main-nav--no-js .main-nav__toggle {
     background-image: url("../img/nav-toggle-close.svg");
   }
 
-  .main-nav--nojs .main-nav__wrapper {
+  .main-nav--no-js .main-nav__wrapper {
     position: static;
     min-height: 0;
     display: block;

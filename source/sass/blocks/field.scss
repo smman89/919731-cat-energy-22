@@ -46,9 +46,11 @@
 
   &:focus {
     border: 1px solid $specialDarkGrey;
+    outline: none;
   }
 
-  &:invalid {
+  &:invalid:focus {
     border: 2px solid $statusError;
+    outline: none;
   }
 }
