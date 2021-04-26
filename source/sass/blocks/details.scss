@@ -1,10 +1,26 @@
 .details {
   grid-area: details;
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 33px;
+  }
+}
+
+.details__list {
+  margin: 0;
 }
 
 .details__item {
   display: flex;
   justify-content: space-between;
+  padding: 3px 0;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 7px;
+    padding-bottom: 9px;
+    border-bottom: 1px solid $specialGrey;
+  }
 }
 
 .details__description,
@@ -13,4 +29,8 @@
   line-height: 16px;
   text-transform: none;
   font-family: $font-family--arial;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+  }
 }

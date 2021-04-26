@@ -25,3 +25,9 @@
     line-height: 36px;
   }
 }
+
+@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  .page-form__wrapper {
+    padding: 0 39px;
+  }
+}
