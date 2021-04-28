@@ -34,15 +34,18 @@
   position: absolute;
   left: 0;
   top: 12px;
+  height: 38px;
+  width: 34px;
 
   @media (min-width: $tablet-width) {
-    position: relative;
-    display: block;
-    margin-right: 12px;
+    width: 174px;
+    height: 51px;
   }
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
     margin-right: 14px;
+    height: 59px;
+    width: 202px;
   }
 }
 
@@ -53,7 +56,6 @@
   top: 24px;
 
   @media (min-width: $tablet-width) {
-    position: relative;
-    display: block;
+    display: none;
   }
 }

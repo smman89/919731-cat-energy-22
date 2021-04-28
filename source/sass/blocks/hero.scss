@@ -1,20 +1,25 @@
 .hero {
   @media (max-width: $mobile-width) {
     background-image: linear-gradient(to top, rgba($basicGreen, 0.85), rgba($basicGreen, 0.85)),
-      url("../img/hero-cat.png");
+      url("../img/hero/hero-background-mobile.jpg");
     background-repeat: no-repeat, no-repeat;
     background-size: cover;
     background-position: center;
     height: 280px;
     margin-bottom: 200px;
     width: 100%;
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(to top, rgba($basicGreen, 0.85), rgba($basicGreen, 0.85)),
+        url("../img/hero/hero-background-mobile@2x.jpg");
+    }
   }
 
   @media (min-width: $desktop-width) {
     &::before {
       content: "";
       background-image: linear-gradient(to top, rgba($basicGreen, 0.85), rgba($basicGreen, 0.85)),
-        url("../img/hero-cat-2.jpg");
+        url("../img/hero/hero-background-desktop.jpg");
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
@@ -24,6 +29,11 @@
       height: 100%;
       z-index: -1;
       width: 50%;
+
+      @media (min-resolution: 2dppx) {
+        background-image: linear-gradient(to top, rgba($basicGreen, 0.85), rgba($basicGreen, 0.85)),
+          url("../img/hero/hero-background-desktop@2x.jpg");
+      }
     }
   }
 }
