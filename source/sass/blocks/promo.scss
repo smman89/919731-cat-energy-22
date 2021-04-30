@@ -1,5 +1,5 @@
 .promo {
-  background-image: url("../img/promo.png");
+  background-image: url("../img/promo/promo-mobile.jpg");
   background-position: center;
   background-size: cover;
   width: auto;
@@ -12,18 +12,32 @@
   align-items: center;
   padding: 58px 60px 43px 60px;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/promo/promo-mobile@2x.jpg");
+  }
+
   @media (min-width: $tablet-width) {
+    background-image: url("../img/promo/promo-tablet.jpg");
     width: auto;
     height: auto;
     flex-direction: row;
     justify-content: space-between;
     padding: 57px 124px 69px 78px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/promo/promo-tablet@2x.jpg");
+    }
   }
 
   @media (min-width: $desktop-width) {
+    background-image: url("../img/promo/promo-desktop.jpg");
     flex-direction: column;
     justify-content: space-between;
     padding: 56px 43px 43px 43px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/promo/promo-desktop@2x.jpg");
+    }
   }
 }
 
