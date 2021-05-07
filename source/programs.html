@@ -155,7 +155,11 @@
         </div>
       </div>
       <div class="map">
-        <img class="map__image" src="./img/location.jpg" width="320" height="362" alt="Карта">
+        <picture>
+          <source type="image/webp" srcset="img/map/location.webp 1x, img/map/location.webp 2x">
+          <img class="map__image" src="img/map/location.jpg" srcset="img/map/location@2x.jpg 2x" width="320"
+            height="362" alt="Карта">
+        </picture>
       </div>
     </section>
   </main>
