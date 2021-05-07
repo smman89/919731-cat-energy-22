@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
   <link rel="icon" href="img/favicon32.ico" sizes="32x32" type="image/vnd.microsoft.icon">
   <link rel="icon" href="img/favicon.svg" sizes="any" type="image/svg+xml">
 </head>
@@ -175,7 +175,15 @@
         </div>
       </div>
       <div class="map">
-        <img class="map__image" src="./img/location.jpg" width="320" height="362" alt="Карта">
+
+        <picture>
+
+          <source type="image/webp" srcset="img/map/location.webp 1x, img/map/location.webp 2x">
+          <img class="map__image" src="img/map/location.jpg" srcset="img/map/location@2x.jpg 2x" width="320"
+            height="362" alt="Карта">
+        </picture>
+
+
       </div>
     </section>
 
@@ -217,7 +225,7 @@
       </a>
     </div>
   </footer>
-  <script src="./js/app.js"></script>
+  <script src="./js/app.min.js"></script>
 </body>
 
 </html>
