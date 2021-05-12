@@ -6,6 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
   <link href="css/style.min.css" rel="stylesheet">
+  <link rel="icon" href="img/favicon32.ico" sizes="32x32" type="image/vnd.microsoft.icon">
+  <link rel="icon" href="img/favicon.svg" sizes="any" type="image/svg+xml">
+  <link rel="preload" href="/fonts/oswaldregular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/oswaldmedium.woff2" as="font" type="font/woff2" crossorigin>
 </head>
 
 <body class="page-body">
@@ -340,15 +344,25 @@
           </address>
         </div>
       </div>
-      <div class="map">
-        <picture>
-          <source type="image/webp" srcset="img/map/location.webp 1x, img/map/location.webp 2x">
-          <img class="map__image" src="img/map/location.jpg" srcset="img/map/location@2x.jpg 2x" width="320"
-            height="362" alt="Карта">
-        </picture>
-      </div>
-    </section>
 
+      <div class="contact__map" hidden></div>
+      <noscript>
+        <picture>
+          <source type="image/webp" media="(min-width: 1440px)"
+            srcset="img/map/location-desktop.webp 1x, img/map/location-desktop@2x.webp 2x">
+          <source media="(min-width: 1440px)"
+            srcset="img/map/location-desktop.jpg 1x, img/map/location-desktop@2x.jpg 2x">
+          <source type="image/webp" media="(min-width: 768px)"
+            srcset="img/map/location-tablet.webp 1x, img/map/location-tablet@2x.webp 2x">
+          <source media="(min-width: 768px)"
+            srcset="img/map/location-desktop.jpg 1x, img/map/location-desktop@2x.jpg 2x">
+          <source type="image/webp" srcset="./img/map/location-mobile.webp 1x, img/map/location-mobile.webp 2x">
+          <img class="contact__map-image" src="./img/map/location-mobile.jpg" srcset="img/map/location-mobile@2x.jpg 2x"
+            width="320" height="362" alt="Карта">
+        </picture>
+      </noscript>
+
+    </section>
   </main>
 
   <footer class="page-footer">
@@ -358,9 +372,9 @@
       </a>
       <ul class="page-footer__social social-list">
         <li class="social-list__item">
-          <a class="social-list__link" href="https://faceboock.com/htmlacademy" aria-label="Вконтакте">
-            <svg width="15" height="29">
-              <use xlink:href="img/sprite.svg#icon-faceboock" />
+          <a class="social-list__link" href="https://vk.com/htmlacademy" aria-label="Facebook">
+            <svg width="29" height="18">
+              <use xlink:href="img/sprite.svg#icon-vk" />
             </svg>
           </a>
         </li>
@@ -372,9 +386,9 @@
           </a>
         </li>
         <li class="social-list__item">
-          <a class="social-list__link" href="https://vk.com/htmlacademy" aria-label="Facebook">
-            <svg width="29" height="18">
-              <use xlink:href="img/sprite.svg#icon-vk" />
+          <a class="social-list__link" href="https://facebook.com/htmlacademy" aria-label="Вконтакте">
+            <svg width="15" height="29">
+              <use xlink:href="img/sprite.svg#icon-facebook" />
             </svg>
           </a>
         </li>
@@ -388,6 +402,8 @@
     </div>
   </footer>
   <script src="./js/app.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBEjUDmUCfkNuhtJShA6MPyVSkjtKCx6cs&callback=initMap"
+  async defer></script>
 </body>
 
 </html>

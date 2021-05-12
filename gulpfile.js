@@ -5,14 +5,14 @@ const sass = require("gulp-sass");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const sync = require("browser-sync").create();
-const csso = require('postcss-csso');
-const rename = require('gulp-rename');
+const csso = require("postcss-csso");
+const rename = require("gulp-rename");
 const imagemin = require("gulp-imagemin");
 const del = require("del");
-const htmlmin = require('gulp-htmlmin');
-const terser = require('gulp-terser');
-const webp = require('gulp-webp');
-const svgstore = require('gulp-svgstore');
+const htmlmin = require("gulp-htmlmin");
+const terser = require("gulp-terser");
+const webp = require("gulp-webp");
+const svgstore = require("gulp-svgstore");
 
 
 // Styles
@@ -39,7 +39,7 @@ exports.styles = styles;
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: 'build'
+      baseDir: "build"
     },
     cors: true,
     notify: false,
@@ -61,7 +61,7 @@ const reload = done => {
 
 const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series(styles));
-  gulp.watch("source/js/script.js", gulp.series(scripts));
+  gulp.watch("source/js/app.js", gulp.series(scripts));
   gulp.watch("source/*.html", gulp.series(html, reload));
 }
 
@@ -79,6 +79,7 @@ exports.html = html
 
 const scripts = () => {
   return gulp.src("source/js/app.js")
+    .pipe(gulp.dest("build/js"))
     .pipe(terser())
     .pipe(rename("app.min.js"))
     .pipe(gulp.dest("build/js"))
@@ -100,8 +101,8 @@ exports.images = images;
 
 
 const copyImages = () => {
-  return gulp.src('source/img/**/*.{png,jpg,svg}')
-    .pipe(gulp.dest('build/img'))
+  return gulp.src("source/img/**/*.{png,jpg,svg}")
+    .pipe(gulp.dest("build/img"))
 }
 exports.copyImages = copyImages
 
