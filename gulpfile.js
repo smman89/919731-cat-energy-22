@@ -22,6 +22,8 @@ const styles = () => {
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(sass())
+    .pipe(rename("style.css"))
+    .pipe(gulp.dest("build/css"))
     .pipe(postcss([
       autoprefixer(),
       csso()
@@ -79,7 +81,6 @@ exports.html = html
 
 const scripts = () => {
   return gulp.src("source/js/app.js")
-    .pipe(gulp.dest("build/js"))
     .pipe(terser())
     .pipe(rename("app.min.js"))
     .pipe(gulp.dest("build/js"))
