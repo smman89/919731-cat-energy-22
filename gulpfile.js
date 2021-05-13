@@ -107,6 +107,12 @@ const copyImages = () => {
 }
 exports.copyImages = copyImages
 
+const copyFavicons = () => {
+  return gulp.src("source/favicon/**/*.{ico,svg}")
+    .pipe(gulp.dest("build/favicon"))
+}
+exports.copyFavicons = copyFavicons
+
 
 // Webp
 
@@ -154,6 +160,7 @@ const build = gulp.series(
   clean,
   copy,
   images,
+  copyFavicons,
   gulp.parallel(
     styles,
     html,
@@ -169,6 +176,7 @@ exports.default = gulp.series(
   clean,
   copy,
   copyImages,
+  copyFavicons,
   gulp.parallel(
     styles,
     html,
