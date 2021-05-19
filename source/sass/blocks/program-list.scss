@@ -5,11 +5,14 @@
   justify-content: space-between;
   flex-basis: 0;
   margin: 0;
+  margin-bottom: 12px;
+  margin-left: 2px;
 
   @media (min-width: $tablet-width) {
     border: 1px solid $lightGrey;
     min-height: 200px;
-    padding: 0;
+    padding: 18px 10px 33px 10px;
+    margin-bottom: 4px;
   }
 
   @media (min-width: $desktop-width) {
@@ -19,7 +22,7 @@
 }
 
 .program-list__item {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   padding: 5px;
   width: fit-content;
 
@@ -28,7 +31,14 @@
     outline: solid;
   }
 
-  @media (max-width: $mobile-width) {
-    margin-left: 0;
+  margin-left: 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 28px;
+    margin-bottom: 0;
   }
 }

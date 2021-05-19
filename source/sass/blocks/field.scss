@@ -15,42 +15,78 @@
 .field__input {
   min-height: 46px;
   width: 100%;
-  border: 1px solid $lightGrey4;
+  outline: 1px solid $lightGrey4;
+  border: none;
   padding-left: 16px;
   color: $specialDarkGrey;
   font-family: $font-family--oswald;
   text-transform: uppercase;
-  margin-left: 15px;
-
-  &[type="email"] {
-    background-image: url("../img/icon-email.svg");
-    background-position: right 16px bottom 50%;
-    background-repeat: no-repeat;
-    padding-right: 40px;
-  }
-
-  &[type="tel"] {
-    background-image: url("../img/icon-phone.svg");
-    background-position: right 13px bottom 50%;
-    background-repeat: no-repeat;
-    padding-right: 40px;
-  }
+  margin-left: 12px;
 
   @media (min-width: $tablet-width) {
     min-height: 52px;
+    margin-left: 18px;
   }
 
   &:hover {
-    border: 1px solid $specialGrey;
+    outline: 2px solid $specialGrey;
   }
 
   &:focus {
-    border: 1px solid $specialDarkGrey;
-    outline: none;
+    outline: 2px solid $specialDarkGrey;
   }
 
   &:invalid:focus {
-    border: 2px solid $statusError;
-    outline: none;
+    outline: 2px solid $statusError;
+  }
+}
+
+.field__input--email {
+  position: relative;
+
+  &::after {
+    content: "c";
+    display: block;
+    background-color: red;
+    position: absolute;
+
+    width: 20px;
+    height: 20px;
+    z-index: 3;
+
+    // mask-image: url("../img/icon-email.svg");
+    // mask-position: right 13px bottom 50%;
+    // mask-repeat: no-repeat;
+    padding-right: 40px;
+    left: 0;
+  }
+
+  &:hover,
+  &:focus {
+    color: $basicGreen;
+  }
+
+  &:active {
+    color: $basicGreen;
+  }
+
+  &:invalid:focus {
+    color: red;
+  }
+}
+
+.field__input--phone {
+  background-image: url("../img/icon-phone.svg");
+  background-position: right 13px bottom 50%;
+  background-repeat: no-repeat;
+  padding-right: 40px;
+
+  &:hover,
+  &:focus {
+    color: $basicGreen;
+  }
+
+  &:invalid:focus {
+    color: red;
   }
 }

@@ -1,13 +1,15 @@
 .additional-list {
   padding: 0;
-  margin-bottom: 34px;
+  margin-bottom: 36px;
   margin-top: 0;
 
   @media (min-width: $tablet-width) {
     display: grid;
-    margin-bottom: 54px;
+    margin-top: 57px;
+    margin-bottom: 40px;
     grid: 1fr 1fr/1fr 1fr;
-    grid-column-gap: 80px;
+    grid-column-gap: 62px;
+    grid-row-gap: 16px;
   }
 
   @media (min-width: $desktop-width) {
@@ -15,12 +17,12 @@
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr;
     grid-column-gap: 80px;
-    margin-bottom: 61px;
+    margin-bottom: 50px;
   }
 }
 
 .additional-list__item {
-  margin-bottom: 13px;
+  margin-bottom: 10px;
   padding: 0;
 
   @media (min-width: $tablet-width) {

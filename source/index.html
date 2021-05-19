@@ -26,11 +26,12 @@
         <img class="page-header__logo-brand" src="img/logo-brandname.svg" width="101" height="18" alt="Cat Energy">
       </a>
       <nav class="main-nav main-nav--closed main-nav--no-js">
-        <button type="button" class="main-nav__toggle" aria-label="Показать/скрыть меню"></button>
+        <button type="button" class="main-nav__toggle main-nav__toggle--no-js"
+          aria-label="Показать/скрыть меню"></button>
         <div class="main-nav__wrapper ">
           <ul class="main-nav__list">
-            <li class="main-nav__item main-nav__item--active ">
-              <a class="main-nav__link main-nav__link--white">Главная</a>
+            <li class="main-nav__item ">
+              <a class="main-nav__link main-nav__link--white main-nav__link--active ">Главная</a>
             </li>
             <li class="main-nav__item">
               <a class="main-nav__link main-nav__link--white" href="catalog.html">Каталог продукции</a>
@@ -45,6 +46,7 @@
 
     <section class="hero container">
       <div class="hero__container ">
+        <h1 class="visually-hidden">Cat Energy - Функциональное питание для котов</h1>
         <h2 class="hero__title">Функциональное питание для котов</h2>
         <p class="hero__slogan">Занялся собой? Займись котом!</p>
         <picture>
@@ -62,11 +64,9 @@
         <a href="/programs.html" class="button button--mobile-wide button--lg">Подобрать программу</a>
       </div>
     </section>
-
   </div>
 
   <main class="page-main">
-    <h1 class="visually-hidden">Cat Energy - Функциональное питание для котов</h1>
     <section class="programs container">
       <h2 class="visually-hidden">Список программ</h2>
       <ul class="programs__list">
@@ -153,7 +153,7 @@
                   srcset="img/example/cat-after-desktop.png 1x, img/example/cat-after-desktop@2x.png 2x">
                 <source media="(min-width: 768px)"
                   srcset="img/example/cat-after-tablet.png 1x, img/example/cat-after-tablet@2x.png 2x">
-                <img class="difference__image" src="img/example/cat-after-mobile.png"
+                <img class="difference__image difference__image--lean" src="img/example/cat-after-mobile.png"
                   srcset="img/example/cat-after-mobile@2x.png 2x" width="311" height="232" alt="Кот после тренеровок">
               </picture>
             </li>
@@ -168,31 +168,28 @@
     </section>
 
     <section class="contact">
-      <div class="container">
-        <div class="contact__container">
-          <h2 class="visually-hidden">Наши контакты</h2>
-          <p class="contact__slogan">Приглашаем к сотрудничеству дилеров</p>
-          <address class="contact__address"><span>ул. Большая Конюшенная, д. 19/8</span><span>Санкт-Петербург</span>
-          </address>
-        </div>
+      <!-- <div class="container"> -->
+      <div class="contact__container">
+        <h2 class="visually-hidden">Наши контакты</h2>
+        <p class="contact__slogan">Приглашаем <br>к сотрудничеству дилеров</p>
+        <address class="contact__address"><span>ул. Большая Конюшенная, д. 19/8</span><span>Санкт-Петербург</span>
+        </address>
+        <!-- </div> -->
       </div>
 
-      <div class="contact__map" hidden></div>
-      <noscript>
-        <picture>
-          <source type="image/webp" media="(min-width: 1440px)"
-            srcset="img/map/location-desktop.webp 1x, img/map/location-desktop@2x.webp 2x">
-          <source media="(min-width: 1440px)"
-            srcset="img/map/location-desktop.jpg 1x, img/map/location-desktop@2x.jpg 2x">
-          <source type="image/webp" media="(min-width: 768px)"
-            srcset="img/map/location-tablet.webp 1x, img/map/location-tablet@2x.webp 2x">
-          <source media="(min-width: 768px)"
-            srcset="img/map/location-desktop.jpg 1x, img/map/location-desktop@2x.jpg 2x">
-          <source type="image/webp" srcset="./img/map/location-mobile.webp 1x, img/map/location-mobile.webp 2x">
-          <img class="contact__map-image" src="./img/map/location-mobile.jpg" srcset="img/map/location-mobile@2x.jpg 2x"
-            width="320" height="362" alt="Карта">
-        </picture>
-      </noscript>
+      <div class="contact__map contact__map--no-js"></div>
+      <picture>
+        <source type="image/webp" media="(min-width: 1440px)"
+          srcset="img/map/location-desktop.webp 1x, img/map/location-desktop@2x.webp 2x">
+        <source media="(min-width: 1440px)"
+          srcset="img/map/location-desktop.jpg 1x, img/map/location-desktop@2x.jpg 2x">
+        <source type="image/webp" media="(min-width: 768px)"
+          srcset="img/map/location-tablet.webp 1x, img/map/location-tablet@2x.webp 2x">
+        <source media="(min-width: 768px)" srcset="img/map/location-desktop.jpg 1x, img/map/location-desktop@2x.jpg 2x">
+        <source type="image/webp" srcset="./img/map/location-mobile.webp 1x, img/map/location-mobile.webp 2x">
+        <img class="contact__map-image" src="./img/map/location-mobile.jpg" srcset="img/map/location-mobile@2x.jpg 2x"
+          width="320" height="362" alt="Карта">
+      </picture>
     </section>
 
   </main>
@@ -200,26 +197,26 @@
   <footer class="page-footer">
     <div class="container page-footer__container">
       <a class="page-footer__logo">
-        <img src="img/logo-brandname.svg" alt="Cat Energy" width="128" height="24">
+        <img src="img/logo-brandname.svg" width="128" height="24" alt="Cat Energy">
       </a>
       <ul class="page-footer__social social-list">
         <li class="social-list__item">
           <a class="social-list__link" href="https://vk.com/htmlacademy" aria-label="Facebook">
-            <svg width="29" height="18">
+            <svg class="social-list__image" width="29" height="18">
               <use xlink:href="img/sprite.svg#icon-vk" />
             </svg>
           </a>
         </li>
         <li class="social-list__item">
           <a class="social-list__link" href="https://instagram.com/htmlacademy" aria-label="Instagram">
-            <svg width="23" height="23">
+            <svg class="social-list__image" width="23" height="23">
               <use xlink:href="img/sprite.svg#icon-instagram" />
             </svg>
           </a>
         </li>
         <li class="social-list__item">
           <a class="social-list__link" href="https://facebook.com/htmlacademy" aria-label="Вконтакте">
-            <svg width="23" height="29">
+            <svg class="social-list__image" width="23" height="29">
               <use xlink:href="img/sprite.svg#icon-facebook" />
             </svg>
           </a>

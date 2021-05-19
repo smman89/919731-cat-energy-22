@@ -1,12 +1,21 @@
 .difference {
+  grid-area: difference;
+
+  margin-top: 32px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 2px;
+  }
+
   @media (min-width: $desktop-width) {
     grid-column: 2/3;
     grid-row: 1/-1;
     transform: none;
-    margin: 0;
+    margin-top: 0;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    align-self: flex-end;
   }
 }
 
@@ -20,6 +29,8 @@
 
 .difference__item {
   @media (max-width: $mobile-width) {
+    margin-left: -10px;
+
     &:last-child {
       display: none;
     }
@@ -29,7 +40,17 @@
     &:last-child {
       position: relative;
 
-      left: -40px;
+      &::before {
+        background-color: $lightGrey2;
+        display: block;
+        position: absolute;
+        content: "";
+        width: 40vw;
+        height: 462px;
+        bottom: -110px;
+        left: 0;
+        z-index: -1;
+      }
     }
   }
 }
@@ -40,13 +61,14 @@
   }
 
   @media (min-width: $tablet-width) {
-    width: 354px;
-    height: 620px;
+    width: auto;
+    height: 536px;
   }
 
   @media (min-width: $desktop-width) {
     width: auto;
     height: 536px;
+    margin-top: 18px;
   }
 }
 

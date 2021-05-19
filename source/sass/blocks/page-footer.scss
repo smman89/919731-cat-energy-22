@@ -8,15 +8,20 @@
   align-items: center;
 
   @media (min-width: $tablet-width) {
-    height: 150px;
+    padding-top: 50px;
+    padding-bottom: 61px;
     flex-direction: row;
     justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 60px;
   }
 }
 
 .page-footer__logo {
   text-align: center;
-  padding: 32px 0;
+  padding: 35px 0 32px 0;
   border-bottom: 1px solid $lightGrey;
   width: 100%;
   cursor: pointer;
@@ -38,7 +43,7 @@
 
 .page-footer__social {
   display: flex;
-  padding: 20px 0;
+  padding: 20px 0 23px 0;
   width: 100%;
   border-bottom: 1px solid $lightGrey;
 
@@ -49,12 +54,7 @@
 }
 
 .page-footer__copyright {
-  padding: 22px 0;
-
-  @media (min-width: $tablet-width) {
-    padding: 0;
-  }
-
+  padding: 25px 0;
   text-decoration: none;
   display: flex;
   flex-direction: row;
@@ -74,13 +74,22 @@
     width: 100%;
     justify-content: space-between;
   }
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    margin-top: -5px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 0;
+  }
 }
 
 .page-footer__copyright-text {
   color: $specialDarkGrey;
   font-family: $font-family--arial;
   font-size: 16px;
-  line-height: 18px;
+  line-height: 18.4px;
   display: block;
   white-space: nowrap;
   padding-right: 20px;

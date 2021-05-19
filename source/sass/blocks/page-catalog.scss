@@ -6,8 +6,19 @@
   font-size: 36px;
   line-height: 36px;
   font-weight: 400;
+  margin-top: 29px;
+  margin-bottom: 40px;
+  font-family: $font-family--oswald;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 165px;
+    margin-top: 48px;
+    line-height: 60px;
+    font-size: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 167px;
+    margin-top: 62px;
   }
 }

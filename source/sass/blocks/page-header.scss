@@ -8,6 +8,11 @@
     align-items: center;
     justify-content: space-between;
   }
+
+  @media (min-width: $desktop-width) {
+    min-height: 112px;
+    align-items: center;
+  }
 }
 
 .page-header__logo {
@@ -16,9 +21,14 @@
   cursor: pointer;
 
   @media (min-width: $tablet-width) {
+    min-height: 95px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 30px;
   }
 
   &:hover {
@@ -40,6 +50,7 @@
   @media (min-width: $tablet-width) {
     width: 174px;
     height: 51px;
+    top: 24px;
   }
 
   @media (min-width: $desktop-width) {

@@ -4,21 +4,27 @@
   justify-content: center;
   align-items: center;
   list-style: none;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 28px;
+    margin-top: -10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 31px;
+    margin-top: -7px;
+  }
 }
 
 .social-list__link {
   color: $specialDarkGrey2;
-  z-index: 2;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: auto;
-  height: 24px;
   margin: 0 16px;
 
   @media (min-width: $tablet-width) {
-    width: 33px;
-    height: 33px;
     margin: 0 12px;
   }
 
@@ -30,5 +36,15 @@
   &:active {
     color: $basicGreen;
     opacity: 0.3;
+  }
+}
+
+.social-list__image {
+  width: 23px;
+  height: 16px;
+
+  @media (min-width: $tablet-width) {
+    width: 26px;
+    height: 26px;
   }
 }

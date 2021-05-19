@@ -2,13 +2,18 @@
   list-style: none;
   display: flex;
   flex-direction: column;
-  margin: 0 0 27px 0;
+  margin: 0 0 9px 0;
   padding: 0;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 17px 0;
+  }
 
   @media (min-width: $desktop-width) {
     display: grid;
     column-gap: 80px;
     grid-template-columns: repeat(2, 1fr);
+    margin: 0 0 43px 0;
   }
 }
 
@@ -18,6 +23,7 @@
   margin-bottom: 20px;
   display: grid;
   align-items: center;
+  position: relative;
   grid-template-areas:
     "logo title"
     "description description"
@@ -28,14 +34,19 @@
     margin-bottom: 30px;
     padding: 77px 62px 53px 52px;
     display: grid;
+    grid-template-columns: 1fr auto;
+    justify-content: space-between;
+    align-items: flex-start;
     grid-template-areas:
-      "title ."
+      "title logo"
       "description logo"
-      "link .";
+      "link logo";
   }
 
   @media (min-width: $desktop-width) {
     padding: 41px 51px 55px 52px;
+    grid-template-columns: auto 1fr;
+
     display: grid;
     grid-template-areas:
       "logo title"
@@ -45,33 +56,53 @@
 
   &::before {
     grid-area: logo;
-
+    background-size: contain;
+    background-position: center;
     content: "";
     display: block;
     height: 53px;
     width: 70px;
-
-    @media (min-width: $tablet-width) {
-      height: 200px;
-      width: 270px;
-    }
-
-    @media (min-width: $desktop-width) {
-      height: 100px;
-      width: 170px;
-    }
   }
 
   &--lean::before {
     background: url("../img/cat-lean.svg") no-repeat;
     background-size: contain;
-    background-position: left;
+    background-position: center;
+
+    @media (min-width: $tablet-width) {
+      height: 211px;
+      width: 200px;
+    }
+
+    @media (min-width: $desktop-width) {
+      height: 100px;
+      width: 100px;
+    }
   }
 
   &--fat::before {
     background: url("../img/cat-fat.svg") no-repeat;
     background-size: contain;
-    background-position: left;
+    background-position: center;
+
+    margin-top: 5px;
+    margin-left: -10px;
+    margin-right: 10px;
+
+    @media (min-width: $tablet-width) {
+      height: 210px;
+      width: 290px;
+      margin-right: -38px;
+      margin-left: 0;
+      margin-top: 20px;
+    }
+
+    @media (min-width: $desktop-width) {
+      height: 103px;
+      width: 140px;
+      margin-left: -22px;
+      margin-top: 5px;
+    }
   }
 }
 
@@ -79,13 +110,20 @@
   grid-area: title;
   text-transform: uppercase;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 24px;
+  line-height: 37px;
   margin: 0;
 
   @media (min-width: $tablet-width) {
     font-size: 36px;
     line-height: 36px;
+    padding-bottom: 25px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    padding-bottom: 0;
+    align-self: center;
   }
 }
 
@@ -103,21 +141,31 @@
   }
 
   @media (min-width: $tablet-width) {
+    padding: 0;
+    padding-bottom: 54px;
     font-size: 16px;
     line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 39px;
+    padding-bottom: 24px;
   }
 }
 
 .programs__link {
   grid-area: link;
   text-transform: uppercase;
-  margin-top: 15px;
+  margin-top: 19px;
   color: $basicBlack;
   text-decoration: none;
   align-items: center;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   margin-right: auto;
+  font-size: 16px;
+  line-height: 16px;
+  font-family: $font-family--oswald;
 
   &:active {
     opacity: 0.3;
@@ -131,14 +179,15 @@
   }
 
   &::after {
-    background-image: url("../img/arrow-right.svg");
+    background-image: url("../img/icon-arrow.svg");
     background-repeat: no-repeat;
     background-position: center;
-    margin-left: 15px;
+    padding-left: 25px;
+
     content: "";
     display: inline-flex;
-    width: 24px;
-    height: 10px;
+    width: 32px;
+    height: 12px;
 
     @media (min-width: $tablet-width) {
       margin-left: 26px;
@@ -147,7 +196,7 @@
 
   &:hover {
     &::after {
-      width: 32px;
+      background-image: url("../img/icon-arrow-big.svg");
     }
   }
 }

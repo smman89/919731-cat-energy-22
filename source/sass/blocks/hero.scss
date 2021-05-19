@@ -4,8 +4,9 @@
       url("../img/hero/hero-background-mobile.jpg");
     background-repeat: no-repeat, no-repeat;
     background-size: cover;
-    background-position: center;
-    height: 280px;
+    background-position: 64% 60%;
+    background-color: $basicGreen;
+    height: 302px;
     margin-bottom: 200px;
     width: 100%;
 
@@ -22,7 +23,8 @@
         url("../img/hero/hero-background-desktop.jpg");
       background-repeat: no-repeat;
       background-size: cover;
-      background-position: center;
+      background-position: 0;
+      background-color: $basicGreen;
       position: absolute;
       top: 0;
       right: 0;
@@ -45,13 +47,14 @@
   }
 
   @media (min-width: $tablet-width) {
-    margin-top: 64px;
-    margin-left: 80px;
+    margin-top: 45px;
+    margin-left: 85px;
     position: relative;
   }
 
   @media (min-width: $desktop-width) {
-    margin-top: 111px;
+    margin-top: 98px;
+    margin-left: 80px;
     position: relative;
     margin-bottom: 200px;
   }
@@ -69,6 +72,7 @@
 
   @media (min-width: $tablet-width) {
     display: block;
+    margin-top: 0;
     width: 414px;
     text-align: left;
     font-weight: 400;
@@ -84,19 +88,24 @@
   text-align: center;
   margin-top: 25px;
   margin-bottom: 29px;
+  font-size: 14px;
+  line-height: 14px;
+  font-style: normal;
+  font-weight: normal;
 
   @media (min-width: $tablet-width) {
     color: $basicBlack;
-    margin-top: 25px;
+    margin-top: 41px;
     text-align: left;
-    margin-bottom: 29px;
+    margin-bottom: 49px;
     font-size: 20px;
     line-height: 20px;
   }
 
   @media (min-width: $desktop-width) {
     text-align: left;
-    margin-bottom: 29px;
+    margin-bottom: 52px;
+    max-width: 450px;
   }
 }
 
@@ -106,19 +115,20 @@
   margin: 0 auto;
 
   @media (min-width: $tablet-width) {
-    width: 550px;
+    width: 709px;
     height: auto;
     z-index: -2;
 
     position: absolute;
-    top: 500;
+    top: 200px;
+    left: -82px;
     margin: 0 auto;
   }
 
   @media (min-width: $desktop-width) {
     width: 552px;
     height: auto;
-    left: 35%;
+    left: 32%;
     top: -82px;
     position: absolute;
     z-index: 2;

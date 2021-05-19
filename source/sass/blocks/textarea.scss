@@ -1,10 +1,11 @@
 .textarea {
   width: 100%;
-  padding: 10px 15px;
+  padding: 10px;
   font-size: 16px;
   line-height: 18px;
   resize: none;
   min-height: 150px;
+  text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;

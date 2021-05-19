@@ -9,6 +9,7 @@
   @media (min-width: $tablet-width) {
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   @media (min-width: $desktop-width) {
@@ -23,10 +24,12 @@
 
   @media (min-width: $tablet-width) {
     margin-top: 24px;
+    max-width: 550px;
   }
 
   @media (min-width: $desktop-width) {
     margin-top: 53px;
+    max-width: 600px;
   }
 }
 
@@ -41,7 +44,11 @@
   outline: none;
   position: absolute;
   right: 20px;
-  top: 25px;
+  top: 22px;
+
+  &--no-js {
+    display: none;
+  }
 
   @media (min-width: $tablet-width) {
     display: none;
@@ -90,27 +97,11 @@
     padding: 0 0 10px 0;
     border: none;
     margin-left: 35px;
-
-    &--active {
-      border-bottom: 2px solid $basicGreen;
-    }
-
-    &--active-green {
-      border-bottom: 2px solid $basicGreen;
-    }
   }
 
   @media (min-width: $desktop-width) {
-    padding: 0 0 10px 0;
+    padding: 0 0 5px 0;
     border: none;
-
-    &--active {
-      border-bottom: 2px solid $basicWhite;
-    }
-
-    &--active-green {
-      border-bottom: 2px solid $basicGreen;
-    }
   }
 }
 
@@ -136,6 +127,15 @@
     font-weight: 400;
     font-size: 18px;
     line-height: 24px;
+
+    &--active {
+      border-bottom: 2px solid $basicGreen;
+      pointer-events: none;
+    }
+
+    &--active-green {
+      border-bottom: 2px solid $basicGreen;
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -145,5 +145,13 @@
     font-weight: 400;
     font-size: 20px;
     line-height: 30px;
+
+    &--active {
+      border-bottom: 2px solid $basicWhite;
+    }
+
+    &--active-green {
+      border-bottom: 2px solid $basicGreen;
+    }
   }
 }

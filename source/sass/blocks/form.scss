@@ -9,15 +9,31 @@
   }
 }
 
+.form__about {
+  padding: 20px 0 8px 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
+}
+
+.form__program {
+  padding-top: 10px;
+  padding-bottom: 8px;
+  padding-left: 0;
+  margin-left: -3px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
+}
+
 .form__about,
 .form__program {
   border: none;
   position: relative;
-  padding: 0;
 
   @media (max-width: $mobile-width) {
-    padding: 20px 0;
-
     &::after {
       content: "";
       position: absolute;
@@ -30,10 +46,8 @@
   }
 }
 
-.form__additional,
-.form__comment,
-.form__contacts {
-  margin-top: 26px;
+.form__additional {
+  margin-top: 24px;
 
   @media (min-width: $tablet-width) {
     margin-top: 67px;
@@ -43,10 +57,49 @@
   padding: 0;
 }
 
+.form__comment {
+  margin-top: 8px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 45px;
+  }
+
+  border: none;
+  padding: 0;
+}
+
+.form__contacts {
+  margin-top: 24px;
+  border: none;
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 67px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 48px;
+  }
+}
+
+.form__contacts-title {
+  max-width: 187px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 100%;
+    margin-bottom: 75px;
+  }
+}
+
+.form__comment-title {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 75px;
+  }
+}
+
 .form__legend {
   position: relative;
   display: inline-flex;
-  margin-bottom: 35px;
   font-family: $font-family--oswald;
   font-size: 24px;
   line-height: 26px;
@@ -63,12 +116,12 @@
   grid-template-areas:
     "submit"
     "description";
-  margin-bottom: 32px;
+  margin-bottom: 15px;
 
   @media (min-width: $tablet-width) {
     grid-template-areas: "submit description";
     grid-column-gap: 60px;
-    margin-bottom: 72px;
+    margin-bottom: 67px;
   }
 
   @media (min-width: $desktop-width) {
@@ -79,7 +132,12 @@
 
 .form__submit {
   grid-area: submit;
-  font-size: 20px;
+  font-size: 16px;
+  line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+  }
 }
 
 .form__description {
@@ -87,6 +145,7 @@
   font-family: $font-family--arial;
   font-size: 14px;
   line-height: 16px;
+  margin-top: 21px;
 
   @media (max-width: $mobile-width) {
     text-align: center;

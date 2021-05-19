@@ -3,10 +3,11 @@
   margin-bottom: 20px;
 
   @media (min-width: $tablet-width) {
-    min-height: 872px;
+    min-height: 929px;
   }
 
   @media (min-width: $desktop-width) {
     min-height: 696px;
+    margin-bottom: 82px;
   }
 }

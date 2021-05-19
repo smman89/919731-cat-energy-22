@@ -14,4 +14,8 @@
 
 .contacts-list__item {
   margin-bottom: 14px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
 }
