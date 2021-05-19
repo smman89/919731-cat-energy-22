@@ -23,7 +23,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-top: 0;
+    margin-top: 15px;
   }
 }
 
@@ -47,8 +47,7 @@
       "indicators difference";
 
     grid-template-rows: auto auto auto;
-    // grid-template-rows: 1fr 1fr 1fr;
-    padding-bottom: 62px;
+    padding-bottom: 71px;
   }
 }
 
@@ -72,8 +71,9 @@
   @media (min-width: $desktop-width) {
     grid-column: 1/2;
     grid-row: 1/2;
-    margin-top: 0;
+    margin-top: 55px;
     margin-bottom: 0;
+    align-self: flex-start;
   }
 }
 
@@ -90,6 +90,7 @@
   @media (min-width: $tablet-width) {
     font-size: 16px;
     line-height: 24px;
+    margin-top: 30px;
     margin-bottom: 30px;
   }
 
@@ -97,6 +98,7 @@
     grid-column: 1/2;
     margin: 0;
     max-width: 436px;
-    margin-top: 25px;
+    margin-top: 140px;
+    align-self: flex-start;
   }
 }

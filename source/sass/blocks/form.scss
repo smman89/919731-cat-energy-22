@@ -10,7 +10,7 @@
 }
 
 .form__about {
-  padding: 20px 0 8px 0;
+  padding: 20px 0 6px 0;
 
   @media (min-width: $tablet-width) {
     padding: 0;
@@ -84,6 +84,7 @@
 
 .form__contacts-title {
   max-width: 187px;
+  margin-bottom: 35px;
 
   @media (min-width: $tablet-width) {
     max-width: 100%;
@@ -92,8 +93,18 @@
 }
 
 .form__comment-title {
+  margin-bottom: 35px;
+
   @media (min-width: $tablet-width) {
     margin-bottom: 75px;
+  }
+}
+
+.form__additional-title {
+  margin-bottom: 35px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
   }
 }
 
@@ -116,7 +127,7 @@
   grid-template-areas:
     "submit"
     "description";
-  margin-bottom: 15px;
+  margin-bottom: 19px;
 
   @media (min-width: $tablet-width) {
     grid-template-areas: "submit description";

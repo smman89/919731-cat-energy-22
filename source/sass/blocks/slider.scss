@@ -34,7 +34,6 @@
     }
 
     input[type="range"]::-moz-range-progress {
-      // background-color: $basicWhite;
       padding: 3px;
       margin: 3px;
     }
@@ -51,9 +50,6 @@
     }
 
     input[type="range"]::-moz-range-track {
-      // background-color: $basicGreen;
-      // width: auto;
-
       height: 6px;
       margin: 3px;
       padding: 0 5px;
@@ -124,7 +120,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin: 12px 0 0 43px;
+    margin: 16px 0 0 43px;
   }
 }
 

@@ -24,7 +24,7 @@
     height: auto;
     flex-direction: row;
     justify-content: space-between;
-    padding: 57px 124px 69px 78px;
+    padding: 60px 124px 63px 78px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/promo/promo-tablet@2x.jpg");
@@ -64,7 +64,7 @@
   margin: 0;
 
   @media (min-width: $tablet-width) {
-    max-width: 161px;
+    max-width: 159px;
     text-align: left;
   }
 

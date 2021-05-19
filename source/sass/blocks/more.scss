@@ -31,6 +31,12 @@
     width: 60px;
     height: 60px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 27px;
+    width: 60px;
+    height: 60px;
+  }
 }
 
 .more__title {
@@ -41,7 +47,8 @@
   color: $specialBlack;
   font-weight: 400;
   font-family: $font-family--oswald;
-  margin-bottom: 10px;
+  margin-top: 18px;
+  margin-bottom: 8px;
 
   @media (min-width: $tablet-width) {
     max-width: 140px;
@@ -58,7 +65,7 @@
   font-family: $font-family--arial;
   color: $specialDarkGrey;
   margin-top: 0;
-  margin-bottom: 25px;
+  margin-bottom: 18px;
 
   @media (min-width: $tablet-width) {
     margin: 0;

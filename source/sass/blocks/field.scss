@@ -5,6 +5,8 @@
   align-items: center;
   font-size: 16px;
   line-height: 18px;
+  position: relative;
+  white-space: nowrap;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
@@ -39,54 +41,19 @@
   &:invalid:focus {
     outline: 2px solid $statusError;
   }
-}
 
-.field__input--email {
-  position: relative;
-
-  &::after {
-    content: "c";
-    display: block;
-    background-color: red;
-    position: absolute;
-
-    width: 20px;
-    height: 20px;
-    z-index: 3;
-
-    // mask-image: url("../img/icon-email.svg");
-    // mask-position: right 13px bottom 50%;
-    // mask-repeat: no-repeat;
-    padding-right: 40px;
-    left: 0;
-  }
-
-  &:hover,
-  &:focus {
+  &:focus + .field__icon {
     color: $basicGreen;
   }
 
-  &:active {
-    color: $basicGreen;
-  }
-
-  &:invalid:focus {
-    color: red;
+  &:invalid:focus + .field__icon {
+    color: $statusError;
   }
 }
 
-.field__input--phone {
-  background-image: url("../img/icon-phone.svg");
-  background-position: right 13px bottom 50%;
-  background-repeat: no-repeat;
-  padding-right: 40px;
-
-  &:hover,
-  &:focus {
-    color: $basicGreen;
-  }
-
-  &:invalid:focus {
-    color: red;
-  }
+.field__icon {
+  position: absolute;
+  right: 17px;
+  top: 17px;
+  color: currentColor;
 }

@@ -8,7 +8,7 @@
   align-items: center;
 
   @media (min-width: $tablet-width) {
-    padding-top: 50px;
+    padding-top: 60px;
     padding-bottom: 61px;
     flex-direction: row;
     justify-content: space-between;
@@ -21,7 +21,7 @@
 
 .page-footer__logo {
   text-align: center;
-  padding: 35px 0 32px 0;
+  padding: 38px 0 32px 0;
   border-bottom: 1px solid $lightGrey;
   width: 100%;
   cursor: pointer;

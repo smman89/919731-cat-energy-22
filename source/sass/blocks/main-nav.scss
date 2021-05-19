@@ -29,7 +29,7 @@
 
   @media (min-width: $desktop-width) {
     margin-top: 53px;
-    max-width: 600px;
+    max-width: 620px;
   }
 }
 
@@ -96,7 +96,7 @@
   @media (min-width: $tablet-width) {
     padding: 0 0 10px 0;
     border: none;
-    margin-left: 35px;
+    margin-left: 37px;
   }
 
   @media (min-width: $desktop-width) {
@@ -129,11 +129,12 @@
     line-height: 24px;
 
     &--active {
+      padding-bottom: 4px;
       border-bottom: 2px solid $basicGreen;
       pointer-events: none;
     }
 
-    &--active-green {
+    &--green {
       border-bottom: 2px solid $basicGreen;
     }
   }
